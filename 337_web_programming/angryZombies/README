@@ -1,0 +1,10 @@
+README
+
+WHAT IS THIS?
+- simple (not fun) game playable in browser using javascript
+
+TO LAUNCH THE APPLICATION
+- to allow saving the game: first run the javascript server using node.js
+	* on command line of system with node installed: node angryZombies_server.js
+- open angryZombies.html in browser and enjoy!
+

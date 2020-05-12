@@ -1,0 +1,46 @@
+/*
+* File: mymdb.css
+* Author: Alexander Miller
+* Description: css file for website allowing search and results of database
+* Course: CSC 337
+* Assignment: HW 10 ~ Kevin Bacon
+* Date: November 14, 2018
+* Appearance:
+*   ^ main section of content centered, with different background color than the body
+*   ^ banner areas a different color from the background
+*   ^ site has consistent color and font theme used throughout
+*   ^ some spacing around all content
+*   ^ table borders should be collapsed
+*/
+
+.banner {
+  background-color: rgb(0,0,120);
+  color: white;
+  margin: 0px;
+  height: 0%;
+  width: 100%;
+  align-items:flex-end;
+}
+
+body {
+  font-family: serif;
+  text-align: center;
+  color: rgb(0,0,120);
+}
+
+fieldset {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+button {
+  height: 30%;
+  color: rgb(0,0,120);
+}

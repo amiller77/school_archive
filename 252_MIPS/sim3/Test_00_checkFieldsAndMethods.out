@@ -1,0 +1,7 @@
+mux.control.length = 3
+mux.in.length = 8
+aluElem.aluOp.length = 3
+alu.aluOp.length = 3
+alu.a.length = 14
+alu.b.length = 14
+alu.result.length = 14

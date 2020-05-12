@@ -1,0 +1,51 @@
+inserted 77
+Current heap: 77
+inserted 39
+Current heap: 77 39
+inserted 35
+Current heap: 77 39 35
+inserted 1
+Current heap: 77 39 35 1
+inserted -39
+Current heap: 77 39 35 1 -39
+inserted 97
+Current heap: 97 39 77 1 -39 35
+inserted 95
+Current heap: 97 39 95 1 -39 35 77
+inserted 0
+Current heap: 97 39 95 1 -39 35 77 0
+removed 97
+Current heap: 95 39 77 1 -39 35 0
+inserted 59
+Current heap: 95 59 77 39 -39 35 0 1
+removed 95
+Current heap: 77 59 35 39 -39 1 0
+removed 77
+Current heap: 59 39 35 0 -39 1
+inserted -42
+Current heap: 59 39 35 0 -39 1 -42
+inserted 78
+Current heap: 78 59 35 39 -39 1 -42 0
+removed 78
+Current heap: 59 39 35 0 -39 1 -42
+inserted 73
+Current heap: 73 59 35 39 -39 1 -42 0
+inserted 91
+Current heap: 91 73 35 59 -39 1 -42 0 39
+inserted 14
+Current heap: 91 73 35 59 14 1 -42 0 39 -39
+inserted 23
+Current heap: 91 73 35 59 23 1 -42 0 39 -39 14
+inserted 52
+Current heap: 91 73 52 59 23 35 -42 0 39 -39 14 1
+removed 91
+Current heap: 73 59 52 39 23 35 -42 0 1 -39 14
+removed 73
+Current heap: 59 39 52 14 23 35 -42 0 1 -39
+removed 59
+Current heap: 52 39 35 14 23 -39 -42 0 1
+removed 52
+Current heap: 39 23 35 14 1 -39 -42 0
+removed 39
+Current heap: 35 23 0 14 1 -39 -42
+--- TESTCASE TERMINATED ---

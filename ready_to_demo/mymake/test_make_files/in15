@@ -1,0 +1,2 @@
+target: a b c
+	touch target

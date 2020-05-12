@@ -1,0 +1,55 @@
+/*
+* Author: Alexander Miller
+* Assignment: Homework 3
+* Description: CSS file that styles guessingGame.html
+*/
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 18pt;
+  margin: 0px;
+}
+
+body, textarea {
+  background-color: rgb(225,225,225);
+}
+
+.bottomElement {
+  margin-left: 60px;
+}
+
+#bottomRight {
+  flex-direction: column;
+}
+
+#bottomRight, #bottomRow, #topRow {
+  display: flex;
+}
+
+#bottomRow {
+  flex-direction: row;
+}
+
+h1 {
+  font-size: 72pt;
+}
+
+h2 {
+  font-size: 20pt;
+  margin-top: 0px;
+}
+
+#topLeft {
+  margin-left: 10px;
+  width: 60%;
+}
+
+#topRight {
+  background-color: magenta;
+  padding: 30px;
+  width: 20%;
+}
+
+#topRow {
+  flex-direction: row;
+}

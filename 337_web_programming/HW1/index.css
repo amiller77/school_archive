@@ -1,0 +1,22 @@
+/*
+Name: Alexander Miller
+Section: 337-001
+File: index.css
+Description: CSS file for index.html; stylizes the HTML page
+*/
+
+body {
+  background-color: rgb(245,245,245);
+  color: rgb(64,64,0);
+  font-family: cursive;
+  text-align: left;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1, h2 {
+  font-family: sans-serif;
+  letter-spacing: 2pt;
+}

@@ -1,0 +1,22 @@
+// testA_css.css
+
+#menu {
+    color: white;
+    background-color: black;
+    padding: 3px;
+}
+
+#menu > p {
+    padding: 20px;
+}
+
+#score {
+    width: 50%;
+}
+
+#rating {
+    background-color: green;
+    color: white;
+    font-size: 30pt;
+    padding: 20px;
+}

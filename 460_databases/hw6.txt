@@ -1,0 +1,42 @@
+Alexander Miller
+
+1.
+/* note for some of the below, since participation is partial for certain entities,
+these foreign keys would have to be implemented using extra table constraints,
+so they will not be listed as foreign keys in the actual sql for this assignment */
+
+Account (AccountNumber, Name, DateOfBirth, StreetNumber, Address, Zipcode)
+    Primary Key (AccountNumber)
+
+DependentAccount (AccountNumber, DepName)
+    Primary Key (AccountNumber, DepName)
+    Foreign Key (AccountNumber) REFERENCES Account
+
+Device (SerialNumber)
+    Primary Key (SerialNumber)
+
+Subscribes (AccountNumber, SerialNumber, ServiceName)
+    Primary Key (AccountNumber, SerialNumber, ServiceName)
+    Foreign Key (AccountNumber) REFERENCES Account
+    Foreign Key (SerialNumber) REFERENCES Device
+    Foreign Key (ServiceName) REFERENCES MediaService
+
+MediaService (ServiceName, MonthlyFee, HasMusic, HasVideo)
+    Primary Key (ServiceName)
+
+Channel (ServiceName, ChannelName, Price, HasMovies, HasSports, HasNews, IsHiDef)
+    Primary Key (ServiceName, ChannelName)
+    Foreign Key (ServiceName) REFERENCES MediaService
+
+Selected (AccountNumber, ServiceName, ChannelName)
+    Primary Key (AccountNumber, ServiceName, ChannelName)
+    Foreign Key (AccountNumber) REFERENCES Account
+    Foreign Key (ServiceName, ChannelName) REFERENCES Channel
+
+4. (English Queries)
+
+English Query 1:
+Give me the user who has a subscription for device 345678.
+
+English Query 2:
+Give me the channels viewed by John Smith. 

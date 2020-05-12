@@ -1,0 +1,6 @@
+execFile : file1.o file2.o
+	gcc -Wall file1.o file2.o -o execFile
+file1.o : file1.c file1.h hdrfile1.h
+	gcc -Wall -g -c file1.c
+file2.o : file2.c file2.h hdrfile1.h hdrfile2.h
+	gcc -Wall -g -c file2.c

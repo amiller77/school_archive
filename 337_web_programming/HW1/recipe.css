@@ -1,0 +1,41 @@
+/*
+Name: Alexander Miller
+Section: 337-001
+File Desc: This is the CSS file to stylize an HTML file for Grandma's Lemon
+Meringue Pie recipe.
+*/
+
+a, h1, h2 {
+  color: rgb(164,164,0);
+}
+
+blockquote {
+  background-color: rgb(255,255,168);
+  font-style: italic;
+}
+
+body {
+  background-color: white;
+  background-image: url(silverware.jpg);
+  background-repeat: repeat;
+  color: rgb(64,64,64);
+  font-family: Georgia, Garamond, serif;
+  font-size: 11pt;
+}
+
+h1, h2 {
+  background-color: rgb(240,240,240);
+  letter-spacing: .25em;
+  font-family: "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 22pt;
+  text-align: center;
+}
+
+h2 {
+  font-size: 18pt;
+  text-align: left;
+}

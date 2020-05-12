@@ -1,0 +1,183 @@
+#! /bin/bash
+
+
+# Occasionally, students use UTF-8 characters in their source code (usually
+# without knowing it).  We might as well support it.
+LC_ALL="en_US.UTF-8"
+
+
+# Java figures out the proper student .java files that are required - but we
+# need a little help for C and assembly.  If you leave either of these blank,
+# then this type of testing simply won't work.
+C_SRC=
+S_SRC=
+
+
+
+if [[ $(which timeout 2>/dev/null) = "" ]]
+then
+  echo "ERROR: The command 'timeout' is not installed on this system, the grading script will not work." 1>&2
+  exit 1
+fi
+
+
+
+JAVA_SRCS=$(ls -1 *.java 2>/dev/null | grep -v -i -E "^Test_" | grep -v -E "Base.java$")
+
+if [[ $JAVA_SRCS != "" ]]
+then
+  echo "Compiling all of the Java sources - your code, plus all of the testcases..."
+
+  # BUGFIX:
+  #
+  # It appears that Java does *NOT* remove old .class files when compilation
+  # fails.  So we had a student who had an old, buggy implementation of the
+  # code (which compiled).  When they changed it to a new (non-compiling)
+  # version, javac (correctly) fails to compile the code but (maddeningly)
+  # leaves the old .class files around.  So, when the code runs, the student
+  # sees the old behavior, for reasons that they don't understand.
+  #
+  # UPDATE: Do *NOT* remove any example class files!
+  rm $(ls -1 *.class | grep -v example) 2>/dev/null
+
+  javac *.java > javac.out 2>&1
+  if [[ $? != 0 || $(cat javac.out) != "" ]]
+  then
+    echo "--- JAVA COMPILE FAILURE ---"
+    echo "javac reported some errors while building your code.  (See the output above.)"
+    echo "This script will now re-run javac on each file, one at a time, in hopes of"
+    echo "succeeding in building some of the testcases."
+    echo
+    echo "In order to not clutter up the script output, this rebuild will *NOT* print"
+    echo "out any error messages; refer to the output above to see why javac failed."
+    echo
+    echo "This process is likely to be slow; if you want, you can use Ctrl-C to kill"
+    echo "this rebuild operation."
+    echo "----------------------------"
+
+    ls -1 *.java 2>&1 | xargs -r -n1 javac 1>/dev/null 2>&1
+  else
+    rm javac.out
+  fi
+fi
+
+
+attempts=0
+passed=0
+
+
+
+echo
+echo "************* Confirming that the student code generates .dot files... *************"
+echo
+
+rm *.dot *.png 2>/dev/null
+
+{
+  echo "is set 10 foo"
+  echo "is dotFile"
+} | timeout -k 1s 15s java Proj03_TestDriver >/dev/null 2>&1
+
+if [[ $(ls -al *.dot 2>/dev/null | grep -v " 0 ") == "" ]]
+then
+  echo "  ******************************** ERROR ********************************"
+  echo "  ******************************** ERROR ********************************"
+  echo "  ******************************** ERROR ********************************"
+  echo "  * Your code does not generate a .dot file when one is requested, or   *"
+  echo "  * the file is empty.  The grading script will refuse to run until you *"
+  echo "  * implement this feature!                                             *"
+  echo "  *                                                                     *"
+  echo "  * This script is not smart enough to determine whether or not you     *"
+  echo "  * actually generated a good .dot file, which is useful for debug, but *"
+  echo "  * you should definitely do that *FIRST* !!!                           *"
+  echo "  *                                                                     *"
+  echo "  *    'Writing code you can't debug is suicide.'  - Russ               *"
+  echo "  ******************************** ERROR ********************************"
+  echo "  ******************************** ERROR ********************************"
+  echo "  ******************************** ERROR ********************************"
+
+  # avoid the divide-by-zero problem
+  attempts=$(( attempts+1 ))
+else
+
+echo
+echo "************* Running the testcases *************"
+echo
+
+
+for TESTCASE in test_*
+do
+  echo "Testcase: $TESTCASE"
+
+
+  attempts=$(( attempts+1 ))
+
+  E_OUT=output.$TESTCASE.example
+  S_OUT=output.$TESTCASE.student
+
+
+  # clean up any pre-existing .dot, .png files
+  rm *.dot *.png 2>/dev/null
+
+
+  # run the testcase using the example code first.
+  java Proj03_TestDriver example < $TESTCASE > $E_OUT 2>&1
+  RC=$?
+
+  if [[ $RC != 0 ]]
+  then
+    echo "  *** TESTCASE ERROR *** Java exited with rc=$RC.  The student code will not be attempted." 1>&2
+    continue
+  fi
+
+
+  # count how many lines of output there are in the example output, so that we
+  # can limit the student output file.  As we've done in other grading script,
+  # I'll allow a budget of 2x the length (to allow and detect overruns),
+  # plus 10 (just in case the example output is empty).
+  LINE_LIMIT=$(wc -l $E_OUT | awk '{print $1}')
+  LINE_LIMIT=$(( LINE_LIMIT*2 + 10 ))
+
+
+  # now, run the testcase using the student code.  Note that we have to run it
+  # under a timeout, since students might have infinite loops.  We also limit
+  # the output (both vertically and horizontally) to prevent the creationg of
+  # crazy output files.
+  timeout -k 1s 15s java Proj03_TestDriver < $TESTCASE 2>&1 | head -n $LINE_LIMIT | cut -c-1000 > $S_OUT
+  RC=$?
+
+  if [[ $RC != 0 ]]
+  then
+    echo "  *** TESTCASE FAILED *** When running the student code, Java had a nonzero exit status"
+    continue
+  fi
+
+  if [[ $(diff $E_OUT $S_OUT) == "" ]]
+  then
+    # testcase passed!
+    rm $E_OUT $S_OUT
+    passed=$(( passed+1 ))
+  else
+    echo "  *** TESTCASE FAILED *** Output mismatch."
+    echo "---- diff begins ----"
+    diff $E_OUT $S_OUT
+    echo "---- diff ends ----"
+  fi
+done
+
+fi   # end of if(student-code-generates-dot-files)
+
+
+MAX_AUTO_SCORE=50
+
+echo
+echo "*******************************************"
+echo "*            OVERALL REPORT"
+echo "* attempts: $attempts"
+echo "* passed:   $passed"
+echo "*"
+echo "* score:    $(( MAX_AUTO_SCORE * passed / attempts ))"
+echo "*    (out of $MAX_AUTO_SCORE possible)"
+echo "*******************************************"
+
+

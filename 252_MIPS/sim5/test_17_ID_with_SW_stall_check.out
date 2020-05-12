@@ -1,0 +1,6081 @@
++-------------------------------------------+
+| STARTING TEST i=0 j=0
++-------------------------------------------+
+  instruction A: 0x02328020
+  instruction B: 0x02328020
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 18
+  ID_EX.rd       = 16
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 16
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02328020 b=0x02328020 sw1=0xac100070
+        stall? 0
+Test 2 (match B): a=0x02328020 b=0x02328020 sw2=0xac100074
+        stall? 0
+Test 3 (SW zero): a=0x02328020 b=0x02328020 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=0 j=1
++-------------------------------------------+
+  instruction A: 0x02328020
+  instruction B: 0x02959822
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 21
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 16
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02328020 b=0x02959822 sw1=0xac100070
+        stall? 1
+Test 2 (match B): a=0x02328020 b=0x02959822 sw2=0xac130074
+        stall? 0
+Test 3 (SW zero): a=0x02328020 b=0x02959822 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=0 j=2
++-------------------------------------------+
+  instruction A: 0x02328020
+  instruction B: 0x216affff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 10
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 16
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02328020 b=0x216affff sw1=0xac100070
+        stall? 1
+Test 2 (match B): a=0x02328020 b=0x216affff sw2=0xac0a0074
+        stall? 0
+Test 3 (SW zero): a=0x02328020 b=0x216affff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=0 j=3
++-------------------------------------------+
+  instruction A: 0x02328020
+  instruction B: 0x21ac0010
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 12
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 16
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02328020 b=0x21ac0010 sw1=0xac100070
+        stall? 1
+Test 2 (match B): a=0x02328020 b=0x21ac0010 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x02328020 b=0x21ac0010 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=0 j=4
++-------------------------------------------+
+  instruction A: 0x02328020
+  instruction B: 0x00020821
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 2
+  ID_EX.rd       = 1
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 16
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02328020 b=0x00020821 sw1=0xac100070
+        stall? 1
+Test 2 (match B): a=0x02328020 b=0x00020821 sw2=0xac010074
+        stall? 0
+Test 3 (SW zero): a=0x02328020 b=0x00020821 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=0 j=5
++-------------------------------------------+
+  instruction A: 0x02328020
+  instruction B: 0x00851823
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 5
+  ID_EX.rd       = 3
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 16
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02328020 b=0x00851823 sw1=0xac100070
+        stall? 1
+Test 2 (match B): a=0x02328020 b=0x00851823 sw2=0xac030074
+        stall? 0
+Test 3 (SW zero): a=0x02328020 b=0x00851823 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=0 j=6
++-------------------------------------------+
+  instruction A: 0x02328020
+  instruction B: 0x24e61234
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 6
+  ID_EX.rd       = 2
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 16
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02328020 b=0x24e61234 sw1=0xac100070
+        stall? 1
+Test 2 (match B): a=0x02328020 b=0x24e61234 sw2=0xac060074
+        stall? 0
+Test 3 (SW zero): a=0x02328020 b=0x24e61234 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=0 j=7
++-------------------------------------------+
+  instruction A: 0x02328020
+  instruction B: 0x014b4824
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 11
+  ID_EX.rd       = 9
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 16
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02328020 b=0x014b4824 sw1=0xac100070
+        stall? 1
+Test 2 (match B): a=0x02328020 b=0x014b4824 sw2=0xac090074
+        stall? 0
+Test 3 (SW zero): a=0x02328020 b=0x014b4824 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=0 j=8
++-------------------------------------------+
+  instruction A: 0x02328020
+  instruction B: 0x01ae6025
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 14
+  ID_EX.rd       = 12
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 16
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02328020 b=0x01ae6025 sw1=0xac100070
+        stall? 1
+Test 2 (match B): a=0x02328020 b=0x01ae6025 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x02328020 b=0x01ae6025 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=0 j=9
++-------------------------------------------+
+  instruction A: 0x02328020
+  instruction B: 0x320f5678
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 15
+  ID_EX.rd       = 10
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 16
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02328020 b=0x320f5678 sw1=0xac100070
+        stall? 1
+Test 2 (match B): a=0x02328020 b=0x320f5678 sw2=0xac0f0074
+        stall? 0
+Test 3 (SW zero): a=0x02328020 b=0x320f5678 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=0 j=10
++-------------------------------------------+
+  instruction A: 0x02328020
+  instruction B: 0x36729abc
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 18
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 16
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02328020 b=0x36729abc sw1=0xac100070
+        stall? 1
+Test 2 (match B): a=0x02328020 b=0x36729abc sw2=0xac120074
+        stall? 0
+Test 3 (SW zero): a=0x02328020 b=0x36729abc sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=0 j=11
++-------------------------------------------+
+  instruction A: 0x02328020
+  instruction B: 0x02d7a82a
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 23
+  ID_EX.rd       = 21
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 16
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02328020 b=0x02d7a82a sw1=0xac100070
+        stall? 1
+Test 2 (match B): a=0x02328020 b=0x02d7a82a sw2=0xac150074
+        stall? 0
+Test 3 (SW zero): a=0x02328020 b=0x02d7a82a sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=0 j=12
++-------------------------------------------+
+  instruction A: 0x02328020
+  instruction B: 0x2b38ffff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 24
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 16
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02328020 b=0x2b38ffff sw1=0xac100070
+        stall? 1
+Test 2 (match B): a=0x02328020 b=0x2b38ffff sw2=0xac180074
+        stall? 0
+Test 3 (SW zero): a=0x02328020 b=0x2b38ffff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=0 j=13
++-------------------------------------------+
+  instruction A: 0x02328020
+  instruction B: 0x8c1a0068
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 26
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 16
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02328020 b=0x8c1a0068 sw1=0xac100070
+        stall? 1
+Test 2 (match B): a=0x02328020 b=0x8c1a0068 sw2=0xac1a0074
+        stall? 0
+Test 3 (SW zero): a=0x02328020 b=0x8c1a0068 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=0 j=14
++-------------------------------------------+
+  instruction A: 0x02328020
+  instruction B: 0xac1d006c
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 0
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 29
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 16
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02328020 b=0xac1d006c sw1=0xac100070
+        stall? 1
+Test 2 (match B): a=0x02328020 b=0xac1d006c sw2=0xac1d0074
+        stall? 0
+Test 3 (SW zero): a=0x02328020 b=0xac1d006c sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=0 j=15
++-------------------------------------------+
+  instruction A: 0x02328020
+  instruction B: 0x00000000
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 0
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 16
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02328020 b=0x00000000 sw1=0xac100070
+        stall? 1
+Skipping Test 2 for this instruction combination, because B appears to "write" to register zero.
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=1 j=0
++-------------------------------------------+
+  instruction A: 0x02959822
+  instruction B: 0x02328020
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 18
+  ID_EX.rd       = 16
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 19
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02959822 b=0x02328020 sw1=0xac130070
+        stall? 1
+Test 2 (match B): a=0x02959822 b=0x02328020 sw2=0xac100074
+        stall? 0
+Test 3 (SW zero): a=0x02959822 b=0x02328020 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=1 j=1
++-------------------------------------------+
+  instruction A: 0x02959822
+  instruction B: 0x02959822
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 21
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 19
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02959822 b=0x02959822 sw1=0xac130070
+        stall? 0
+Test 2 (match B): a=0x02959822 b=0x02959822 sw2=0xac130074
+        stall? 0
+Test 3 (SW zero): a=0x02959822 b=0x02959822 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=1 j=2
++-------------------------------------------+
+  instruction A: 0x02959822
+  instruction B: 0x216affff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 10
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 19
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02959822 b=0x216affff sw1=0xac130070
+        stall? 1
+Test 2 (match B): a=0x02959822 b=0x216affff sw2=0xac0a0074
+        stall? 0
+Test 3 (SW zero): a=0x02959822 b=0x216affff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=1 j=3
++-------------------------------------------+
+  instruction A: 0x02959822
+  instruction B: 0x21ac0010
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 12
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 19
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02959822 b=0x21ac0010 sw1=0xac130070
+        stall? 1
+Test 2 (match B): a=0x02959822 b=0x21ac0010 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x02959822 b=0x21ac0010 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=1 j=4
++-------------------------------------------+
+  instruction A: 0x02959822
+  instruction B: 0x00020821
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 2
+  ID_EX.rd       = 1
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 19
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02959822 b=0x00020821 sw1=0xac130070
+        stall? 1
+Test 2 (match B): a=0x02959822 b=0x00020821 sw2=0xac010074
+        stall? 0
+Test 3 (SW zero): a=0x02959822 b=0x00020821 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=1 j=5
++-------------------------------------------+
+  instruction A: 0x02959822
+  instruction B: 0x00851823
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 5
+  ID_EX.rd       = 3
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 19
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02959822 b=0x00851823 sw1=0xac130070
+        stall? 1
+Test 2 (match B): a=0x02959822 b=0x00851823 sw2=0xac030074
+        stall? 0
+Test 3 (SW zero): a=0x02959822 b=0x00851823 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=1 j=6
++-------------------------------------------+
+  instruction A: 0x02959822
+  instruction B: 0x24e61234
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 6
+  ID_EX.rd       = 2
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 19
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02959822 b=0x24e61234 sw1=0xac130070
+        stall? 1
+Test 2 (match B): a=0x02959822 b=0x24e61234 sw2=0xac060074
+        stall? 0
+Test 3 (SW zero): a=0x02959822 b=0x24e61234 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=1 j=7
++-------------------------------------------+
+  instruction A: 0x02959822
+  instruction B: 0x014b4824
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 11
+  ID_EX.rd       = 9
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 19
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02959822 b=0x014b4824 sw1=0xac130070
+        stall? 1
+Test 2 (match B): a=0x02959822 b=0x014b4824 sw2=0xac090074
+        stall? 0
+Test 3 (SW zero): a=0x02959822 b=0x014b4824 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=1 j=8
++-------------------------------------------+
+  instruction A: 0x02959822
+  instruction B: 0x01ae6025
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 14
+  ID_EX.rd       = 12
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 19
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02959822 b=0x01ae6025 sw1=0xac130070
+        stall? 1
+Test 2 (match B): a=0x02959822 b=0x01ae6025 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x02959822 b=0x01ae6025 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=1 j=9
++-------------------------------------------+
+  instruction A: 0x02959822
+  instruction B: 0x320f5678
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 15
+  ID_EX.rd       = 10
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 19
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02959822 b=0x320f5678 sw1=0xac130070
+        stall? 1
+Test 2 (match B): a=0x02959822 b=0x320f5678 sw2=0xac0f0074
+        stall? 0
+Test 3 (SW zero): a=0x02959822 b=0x320f5678 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=1 j=10
++-------------------------------------------+
+  instruction A: 0x02959822
+  instruction B: 0x36729abc
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 18
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 19
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02959822 b=0x36729abc sw1=0xac130070
+        stall? 1
+Test 2 (match B): a=0x02959822 b=0x36729abc sw2=0xac120074
+        stall? 0
+Test 3 (SW zero): a=0x02959822 b=0x36729abc sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=1 j=11
++-------------------------------------------+
+  instruction A: 0x02959822
+  instruction B: 0x02d7a82a
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 23
+  ID_EX.rd       = 21
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 19
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02959822 b=0x02d7a82a sw1=0xac130070
+        stall? 1
+Test 2 (match B): a=0x02959822 b=0x02d7a82a sw2=0xac150074
+        stall? 0
+Test 3 (SW zero): a=0x02959822 b=0x02d7a82a sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=1 j=12
++-------------------------------------------+
+  instruction A: 0x02959822
+  instruction B: 0x2b38ffff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 24
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 19
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02959822 b=0x2b38ffff sw1=0xac130070
+        stall? 1
+Test 2 (match B): a=0x02959822 b=0x2b38ffff sw2=0xac180074
+        stall? 0
+Test 3 (SW zero): a=0x02959822 b=0x2b38ffff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=1 j=13
++-------------------------------------------+
+  instruction A: 0x02959822
+  instruction B: 0x8c1a0068
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 26
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 19
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02959822 b=0x8c1a0068 sw1=0xac130070
+        stall? 1
+Test 2 (match B): a=0x02959822 b=0x8c1a0068 sw2=0xac1a0074
+        stall? 0
+Test 3 (SW zero): a=0x02959822 b=0x8c1a0068 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=1 j=14
++-------------------------------------------+
+  instruction A: 0x02959822
+  instruction B: 0xac1d006c
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 0
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 29
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 19
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02959822 b=0xac1d006c sw1=0xac130070
+        stall? 1
+Test 2 (match B): a=0x02959822 b=0xac1d006c sw2=0xac1d0074
+        stall? 0
+Test 3 (SW zero): a=0x02959822 b=0xac1d006c sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=1 j=15
++-------------------------------------------+
+  instruction A: 0x02959822
+  instruction B: 0x00000000
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 0
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 19
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02959822 b=0x00000000 sw1=0xac130070
+        stall? 1
+Skipping Test 2 for this instruction combination, because B appears to "write" to register zero.
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=2 j=0
++-------------------------------------------+
+  instruction A: 0x216affff
+  instruction B: 0x02328020
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 18
+  ID_EX.rd       = 16
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 10
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x216affff b=0x02328020 sw1=0xac0a0070
+        stall? 1
+Test 2 (match B): a=0x216affff b=0x02328020 sw2=0xac100074
+        stall? 0
+Test 3 (SW zero): a=0x216affff b=0x02328020 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=2 j=1
++-------------------------------------------+
+  instruction A: 0x216affff
+  instruction B: 0x02959822
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 21
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 10
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x216affff b=0x02959822 sw1=0xac0a0070
+        stall? 1
+Test 2 (match B): a=0x216affff b=0x02959822 sw2=0xac130074
+        stall? 0
+Test 3 (SW zero): a=0x216affff b=0x02959822 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=2 j=2
++-------------------------------------------+
+  instruction A: 0x216affff
+  instruction B: 0x216affff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 10
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 10
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x216affff b=0x216affff sw1=0xac0a0070
+        stall? 0
+Test 2 (match B): a=0x216affff b=0x216affff sw2=0xac0a0074
+        stall? 0
+Test 3 (SW zero): a=0x216affff b=0x216affff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=2 j=3
++-------------------------------------------+
+  instruction A: 0x216affff
+  instruction B: 0x21ac0010
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 12
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 10
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x216affff b=0x21ac0010 sw1=0xac0a0070
+        stall? 1
+Test 2 (match B): a=0x216affff b=0x21ac0010 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x216affff b=0x21ac0010 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=2 j=4
++-------------------------------------------+
+  instruction A: 0x216affff
+  instruction B: 0x00020821
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 2
+  ID_EX.rd       = 1
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 10
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x216affff b=0x00020821 sw1=0xac0a0070
+        stall? 1
+Test 2 (match B): a=0x216affff b=0x00020821 sw2=0xac010074
+        stall? 0
+Test 3 (SW zero): a=0x216affff b=0x00020821 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=2 j=5
++-------------------------------------------+
+  instruction A: 0x216affff
+  instruction B: 0x00851823
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 5
+  ID_EX.rd       = 3
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 10
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x216affff b=0x00851823 sw1=0xac0a0070
+        stall? 1
+Test 2 (match B): a=0x216affff b=0x00851823 sw2=0xac030074
+        stall? 0
+Test 3 (SW zero): a=0x216affff b=0x00851823 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=2 j=6
++-------------------------------------------+
+  instruction A: 0x216affff
+  instruction B: 0x24e61234
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 6
+  ID_EX.rd       = 2
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 10
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x216affff b=0x24e61234 sw1=0xac0a0070
+        stall? 1
+Test 2 (match B): a=0x216affff b=0x24e61234 sw2=0xac060074
+        stall? 0
+Test 3 (SW zero): a=0x216affff b=0x24e61234 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=2 j=7
++-------------------------------------------+
+  instruction A: 0x216affff
+  instruction B: 0x014b4824
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 11
+  ID_EX.rd       = 9
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 10
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x216affff b=0x014b4824 sw1=0xac0a0070
+        stall? 1
+Test 2 (match B): a=0x216affff b=0x014b4824 sw2=0xac090074
+        stall? 0
+Test 3 (SW zero): a=0x216affff b=0x014b4824 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=2 j=8
++-------------------------------------------+
+  instruction A: 0x216affff
+  instruction B: 0x01ae6025
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 14
+  ID_EX.rd       = 12
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 10
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x216affff b=0x01ae6025 sw1=0xac0a0070
+        stall? 1
+Test 2 (match B): a=0x216affff b=0x01ae6025 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x216affff b=0x01ae6025 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=2 j=9
++-------------------------------------------+
+  instruction A: 0x216affff
+  instruction B: 0x320f5678
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 15
+  ID_EX.rd       = 10
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 10
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x216affff b=0x320f5678 sw1=0xac0a0070
+        stall? 1
+Test 2 (match B): a=0x216affff b=0x320f5678 sw2=0xac0f0074
+        stall? 0
+Test 3 (SW zero): a=0x216affff b=0x320f5678 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=2 j=10
++-------------------------------------------+
+  instruction A: 0x216affff
+  instruction B: 0x36729abc
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 18
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 10
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x216affff b=0x36729abc sw1=0xac0a0070
+        stall? 1
+Test 2 (match B): a=0x216affff b=0x36729abc sw2=0xac120074
+        stall? 0
+Test 3 (SW zero): a=0x216affff b=0x36729abc sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=2 j=11
++-------------------------------------------+
+  instruction A: 0x216affff
+  instruction B: 0x02d7a82a
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 23
+  ID_EX.rd       = 21
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 10
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x216affff b=0x02d7a82a sw1=0xac0a0070
+        stall? 1
+Test 2 (match B): a=0x216affff b=0x02d7a82a sw2=0xac150074
+        stall? 0
+Test 3 (SW zero): a=0x216affff b=0x02d7a82a sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=2 j=12
++-------------------------------------------+
+  instruction A: 0x216affff
+  instruction B: 0x2b38ffff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 24
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 10
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x216affff b=0x2b38ffff sw1=0xac0a0070
+        stall? 1
+Test 2 (match B): a=0x216affff b=0x2b38ffff sw2=0xac180074
+        stall? 0
+Test 3 (SW zero): a=0x216affff b=0x2b38ffff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=2 j=13
++-------------------------------------------+
+  instruction A: 0x216affff
+  instruction B: 0x8c1a0068
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 26
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 10
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x216affff b=0x8c1a0068 sw1=0xac0a0070
+        stall? 1
+Test 2 (match B): a=0x216affff b=0x8c1a0068 sw2=0xac1a0074
+        stall? 0
+Test 3 (SW zero): a=0x216affff b=0x8c1a0068 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=2 j=14
++-------------------------------------------+
+  instruction A: 0x216affff
+  instruction B: 0xac1d006c
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 0
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 29
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 10
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x216affff b=0xac1d006c sw1=0xac0a0070
+        stall? 1
+Test 2 (match B): a=0x216affff b=0xac1d006c sw2=0xac1d0074
+        stall? 0
+Test 3 (SW zero): a=0x216affff b=0xac1d006c sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=2 j=15
++-------------------------------------------+
+  instruction A: 0x216affff
+  instruction B: 0x00000000
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 0
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 10
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x216affff b=0x00000000 sw1=0xac0a0070
+        stall? 1
+Skipping Test 2 for this instruction combination, because B appears to "write" to register zero.
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=3 j=0
++-------------------------------------------+
+  instruction A: 0x21ac0010
+  instruction B: 0x02328020
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 18
+  ID_EX.rd       = 16
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x21ac0010 b=0x02328020 sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x21ac0010 b=0x02328020 sw2=0xac100074
+        stall? 0
+Test 3 (SW zero): a=0x21ac0010 b=0x02328020 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=3 j=1
++-------------------------------------------+
+  instruction A: 0x21ac0010
+  instruction B: 0x02959822
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 21
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x21ac0010 b=0x02959822 sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x21ac0010 b=0x02959822 sw2=0xac130074
+        stall? 0
+Test 3 (SW zero): a=0x21ac0010 b=0x02959822 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=3 j=2
++-------------------------------------------+
+  instruction A: 0x21ac0010
+  instruction B: 0x216affff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 10
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x21ac0010 b=0x216affff sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x21ac0010 b=0x216affff sw2=0xac0a0074
+        stall? 0
+Test 3 (SW zero): a=0x21ac0010 b=0x216affff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=3 j=3
++-------------------------------------------+
+  instruction A: 0x21ac0010
+  instruction B: 0x21ac0010
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 12
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x21ac0010 b=0x21ac0010 sw1=0xac0c0070
+        stall? 0
+Test 2 (match B): a=0x21ac0010 b=0x21ac0010 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x21ac0010 b=0x21ac0010 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=3 j=4
++-------------------------------------------+
+  instruction A: 0x21ac0010
+  instruction B: 0x00020821
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 2
+  ID_EX.rd       = 1
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x21ac0010 b=0x00020821 sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x21ac0010 b=0x00020821 sw2=0xac010074
+        stall? 0
+Test 3 (SW zero): a=0x21ac0010 b=0x00020821 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=3 j=5
++-------------------------------------------+
+  instruction A: 0x21ac0010
+  instruction B: 0x00851823
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 5
+  ID_EX.rd       = 3
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x21ac0010 b=0x00851823 sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x21ac0010 b=0x00851823 sw2=0xac030074
+        stall? 0
+Test 3 (SW zero): a=0x21ac0010 b=0x00851823 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=3 j=6
++-------------------------------------------+
+  instruction A: 0x21ac0010
+  instruction B: 0x24e61234
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 6
+  ID_EX.rd       = 2
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x21ac0010 b=0x24e61234 sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x21ac0010 b=0x24e61234 sw2=0xac060074
+        stall? 0
+Test 3 (SW zero): a=0x21ac0010 b=0x24e61234 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=3 j=7
++-------------------------------------------+
+  instruction A: 0x21ac0010
+  instruction B: 0x014b4824
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 11
+  ID_EX.rd       = 9
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x21ac0010 b=0x014b4824 sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x21ac0010 b=0x014b4824 sw2=0xac090074
+        stall? 0
+Test 3 (SW zero): a=0x21ac0010 b=0x014b4824 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=3 j=8
++-------------------------------------------+
+  instruction A: 0x21ac0010
+  instruction B: 0x01ae6025
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 14
+  ID_EX.rd       = 12
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x21ac0010 b=0x01ae6025 sw1=0xac0c0070
+        stall? 0
+Test 2 (match B): a=0x21ac0010 b=0x01ae6025 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x21ac0010 b=0x01ae6025 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=3 j=9
++-------------------------------------------+
+  instruction A: 0x21ac0010
+  instruction B: 0x320f5678
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 15
+  ID_EX.rd       = 10
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x21ac0010 b=0x320f5678 sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x21ac0010 b=0x320f5678 sw2=0xac0f0074
+        stall? 0
+Test 3 (SW zero): a=0x21ac0010 b=0x320f5678 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=3 j=10
++-------------------------------------------+
+  instruction A: 0x21ac0010
+  instruction B: 0x36729abc
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 18
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x21ac0010 b=0x36729abc sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x21ac0010 b=0x36729abc sw2=0xac120074
+        stall? 0
+Test 3 (SW zero): a=0x21ac0010 b=0x36729abc sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=3 j=11
++-------------------------------------------+
+  instruction A: 0x21ac0010
+  instruction B: 0x02d7a82a
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 23
+  ID_EX.rd       = 21
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x21ac0010 b=0x02d7a82a sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x21ac0010 b=0x02d7a82a sw2=0xac150074
+        stall? 0
+Test 3 (SW zero): a=0x21ac0010 b=0x02d7a82a sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=3 j=12
++-------------------------------------------+
+  instruction A: 0x21ac0010
+  instruction B: 0x2b38ffff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 24
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x21ac0010 b=0x2b38ffff sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x21ac0010 b=0x2b38ffff sw2=0xac180074
+        stall? 0
+Test 3 (SW zero): a=0x21ac0010 b=0x2b38ffff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=3 j=13
++-------------------------------------------+
+  instruction A: 0x21ac0010
+  instruction B: 0x8c1a0068
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 26
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x21ac0010 b=0x8c1a0068 sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x21ac0010 b=0x8c1a0068 sw2=0xac1a0074
+        stall? 0
+Test 3 (SW zero): a=0x21ac0010 b=0x8c1a0068 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=3 j=14
++-------------------------------------------+
+  instruction A: 0x21ac0010
+  instruction B: 0xac1d006c
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 0
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 29
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x21ac0010 b=0xac1d006c sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x21ac0010 b=0xac1d006c sw2=0xac1d0074
+        stall? 0
+Test 3 (SW zero): a=0x21ac0010 b=0xac1d006c sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=3 j=15
++-------------------------------------------+
+  instruction A: 0x21ac0010
+  instruction B: 0x00000000
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 0
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x21ac0010 b=0x00000000 sw1=0xac0c0070
+        stall? 1
+Skipping Test 2 for this instruction combination, because B appears to "write" to register zero.
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=4 j=0
++-------------------------------------------+
+  instruction A: 0x00020821
+  instruction B: 0x02328020
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 18
+  ID_EX.rd       = 16
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 1
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00020821 b=0x02328020 sw1=0xac010070
+        stall? 1
+Test 2 (match B): a=0x00020821 b=0x02328020 sw2=0xac100074
+        stall? 0
+Test 3 (SW zero): a=0x00020821 b=0x02328020 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=4 j=1
++-------------------------------------------+
+  instruction A: 0x00020821
+  instruction B: 0x02959822
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 21
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 1
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00020821 b=0x02959822 sw1=0xac010070
+        stall? 1
+Test 2 (match B): a=0x00020821 b=0x02959822 sw2=0xac130074
+        stall? 0
+Test 3 (SW zero): a=0x00020821 b=0x02959822 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=4 j=2
++-------------------------------------------+
+  instruction A: 0x00020821
+  instruction B: 0x216affff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 10
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 1
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00020821 b=0x216affff sw1=0xac010070
+        stall? 1
+Test 2 (match B): a=0x00020821 b=0x216affff sw2=0xac0a0074
+        stall? 0
+Test 3 (SW zero): a=0x00020821 b=0x216affff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=4 j=3
++-------------------------------------------+
+  instruction A: 0x00020821
+  instruction B: 0x21ac0010
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 12
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 1
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00020821 b=0x21ac0010 sw1=0xac010070
+        stall? 1
+Test 2 (match B): a=0x00020821 b=0x21ac0010 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x00020821 b=0x21ac0010 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=4 j=4
++-------------------------------------------+
+  instruction A: 0x00020821
+  instruction B: 0x00020821
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 2
+  ID_EX.rd       = 1
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 1
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00020821 b=0x00020821 sw1=0xac010070
+        stall? 0
+Test 2 (match B): a=0x00020821 b=0x00020821 sw2=0xac010074
+        stall? 0
+Test 3 (SW zero): a=0x00020821 b=0x00020821 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=4 j=5
++-------------------------------------------+
+  instruction A: 0x00020821
+  instruction B: 0x00851823
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 5
+  ID_EX.rd       = 3
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 1
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00020821 b=0x00851823 sw1=0xac010070
+        stall? 1
+Test 2 (match B): a=0x00020821 b=0x00851823 sw2=0xac030074
+        stall? 0
+Test 3 (SW zero): a=0x00020821 b=0x00851823 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=4 j=6
++-------------------------------------------+
+  instruction A: 0x00020821
+  instruction B: 0x24e61234
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 6
+  ID_EX.rd       = 2
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 1
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00020821 b=0x24e61234 sw1=0xac010070
+        stall? 1
+Test 2 (match B): a=0x00020821 b=0x24e61234 sw2=0xac060074
+        stall? 0
+Test 3 (SW zero): a=0x00020821 b=0x24e61234 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=4 j=7
++-------------------------------------------+
+  instruction A: 0x00020821
+  instruction B: 0x014b4824
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 11
+  ID_EX.rd       = 9
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 1
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00020821 b=0x014b4824 sw1=0xac010070
+        stall? 1
+Test 2 (match B): a=0x00020821 b=0x014b4824 sw2=0xac090074
+        stall? 0
+Test 3 (SW zero): a=0x00020821 b=0x014b4824 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=4 j=8
++-------------------------------------------+
+  instruction A: 0x00020821
+  instruction B: 0x01ae6025
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 14
+  ID_EX.rd       = 12
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 1
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00020821 b=0x01ae6025 sw1=0xac010070
+        stall? 1
+Test 2 (match B): a=0x00020821 b=0x01ae6025 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x00020821 b=0x01ae6025 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=4 j=9
++-------------------------------------------+
+  instruction A: 0x00020821
+  instruction B: 0x320f5678
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 15
+  ID_EX.rd       = 10
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 1
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00020821 b=0x320f5678 sw1=0xac010070
+        stall? 1
+Test 2 (match B): a=0x00020821 b=0x320f5678 sw2=0xac0f0074
+        stall? 0
+Test 3 (SW zero): a=0x00020821 b=0x320f5678 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=4 j=10
++-------------------------------------------+
+  instruction A: 0x00020821
+  instruction B: 0x36729abc
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 18
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 1
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00020821 b=0x36729abc sw1=0xac010070
+        stall? 1
+Test 2 (match B): a=0x00020821 b=0x36729abc sw2=0xac120074
+        stall? 0
+Test 3 (SW zero): a=0x00020821 b=0x36729abc sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=4 j=11
++-------------------------------------------+
+  instruction A: 0x00020821
+  instruction B: 0x02d7a82a
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 23
+  ID_EX.rd       = 21
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 1
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00020821 b=0x02d7a82a sw1=0xac010070
+        stall? 1
+Test 2 (match B): a=0x00020821 b=0x02d7a82a sw2=0xac150074
+        stall? 0
+Test 3 (SW zero): a=0x00020821 b=0x02d7a82a sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=4 j=12
++-------------------------------------------+
+  instruction A: 0x00020821
+  instruction B: 0x2b38ffff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 24
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 1
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00020821 b=0x2b38ffff sw1=0xac010070
+        stall? 1
+Test 2 (match B): a=0x00020821 b=0x2b38ffff sw2=0xac180074
+        stall? 0
+Test 3 (SW zero): a=0x00020821 b=0x2b38ffff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=4 j=13
++-------------------------------------------+
+  instruction A: 0x00020821
+  instruction B: 0x8c1a0068
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 26
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 1
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00020821 b=0x8c1a0068 sw1=0xac010070
+        stall? 1
+Test 2 (match B): a=0x00020821 b=0x8c1a0068 sw2=0xac1a0074
+        stall? 0
+Test 3 (SW zero): a=0x00020821 b=0x8c1a0068 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=4 j=14
++-------------------------------------------+
+  instruction A: 0x00020821
+  instruction B: 0xac1d006c
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 0
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 29
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 1
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00020821 b=0xac1d006c sw1=0xac010070
+        stall? 1
+Test 2 (match B): a=0x00020821 b=0xac1d006c sw2=0xac1d0074
+        stall? 0
+Test 3 (SW zero): a=0x00020821 b=0xac1d006c sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=4 j=15
++-------------------------------------------+
+  instruction A: 0x00020821
+  instruction B: 0x00000000
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 0
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 1
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00020821 b=0x00000000 sw1=0xac010070
+        stall? 1
+Skipping Test 2 for this instruction combination, because B appears to "write" to register zero.
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=5 j=0
++-------------------------------------------+
+  instruction A: 0x00851823
+  instruction B: 0x02328020
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 18
+  ID_EX.rd       = 16
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 3
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00851823 b=0x02328020 sw1=0xac030070
+        stall? 1
+Test 2 (match B): a=0x00851823 b=0x02328020 sw2=0xac100074
+        stall? 0
+Test 3 (SW zero): a=0x00851823 b=0x02328020 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=5 j=1
++-------------------------------------------+
+  instruction A: 0x00851823
+  instruction B: 0x02959822
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 21
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 3
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00851823 b=0x02959822 sw1=0xac030070
+        stall? 1
+Test 2 (match B): a=0x00851823 b=0x02959822 sw2=0xac130074
+        stall? 0
+Test 3 (SW zero): a=0x00851823 b=0x02959822 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=5 j=2
++-------------------------------------------+
+  instruction A: 0x00851823
+  instruction B: 0x216affff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 10
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 3
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00851823 b=0x216affff sw1=0xac030070
+        stall? 1
+Test 2 (match B): a=0x00851823 b=0x216affff sw2=0xac0a0074
+        stall? 0
+Test 3 (SW zero): a=0x00851823 b=0x216affff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=5 j=3
++-------------------------------------------+
+  instruction A: 0x00851823
+  instruction B: 0x21ac0010
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 12
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 3
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00851823 b=0x21ac0010 sw1=0xac030070
+        stall? 1
+Test 2 (match B): a=0x00851823 b=0x21ac0010 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x00851823 b=0x21ac0010 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=5 j=4
++-------------------------------------------+
+  instruction A: 0x00851823
+  instruction B: 0x00020821
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 2
+  ID_EX.rd       = 1
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 3
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00851823 b=0x00020821 sw1=0xac030070
+        stall? 1
+Test 2 (match B): a=0x00851823 b=0x00020821 sw2=0xac010074
+        stall? 0
+Test 3 (SW zero): a=0x00851823 b=0x00020821 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=5 j=5
++-------------------------------------------+
+  instruction A: 0x00851823
+  instruction B: 0x00851823
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 5
+  ID_EX.rd       = 3
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 3
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00851823 b=0x00851823 sw1=0xac030070
+        stall? 0
+Test 2 (match B): a=0x00851823 b=0x00851823 sw2=0xac030074
+        stall? 0
+Test 3 (SW zero): a=0x00851823 b=0x00851823 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=5 j=6
++-------------------------------------------+
+  instruction A: 0x00851823
+  instruction B: 0x24e61234
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 6
+  ID_EX.rd       = 2
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 3
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00851823 b=0x24e61234 sw1=0xac030070
+        stall? 1
+Test 2 (match B): a=0x00851823 b=0x24e61234 sw2=0xac060074
+        stall? 0
+Test 3 (SW zero): a=0x00851823 b=0x24e61234 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=5 j=7
++-------------------------------------------+
+  instruction A: 0x00851823
+  instruction B: 0x014b4824
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 11
+  ID_EX.rd       = 9
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 3
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00851823 b=0x014b4824 sw1=0xac030070
+        stall? 1
+Test 2 (match B): a=0x00851823 b=0x014b4824 sw2=0xac090074
+        stall? 0
+Test 3 (SW zero): a=0x00851823 b=0x014b4824 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=5 j=8
++-------------------------------------------+
+  instruction A: 0x00851823
+  instruction B: 0x01ae6025
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 14
+  ID_EX.rd       = 12
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 3
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00851823 b=0x01ae6025 sw1=0xac030070
+        stall? 1
+Test 2 (match B): a=0x00851823 b=0x01ae6025 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x00851823 b=0x01ae6025 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=5 j=9
++-------------------------------------------+
+  instruction A: 0x00851823
+  instruction B: 0x320f5678
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 15
+  ID_EX.rd       = 10
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 3
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00851823 b=0x320f5678 sw1=0xac030070
+        stall? 1
+Test 2 (match B): a=0x00851823 b=0x320f5678 sw2=0xac0f0074
+        stall? 0
+Test 3 (SW zero): a=0x00851823 b=0x320f5678 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=5 j=10
++-------------------------------------------+
+  instruction A: 0x00851823
+  instruction B: 0x36729abc
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 18
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 3
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00851823 b=0x36729abc sw1=0xac030070
+        stall? 1
+Test 2 (match B): a=0x00851823 b=0x36729abc sw2=0xac120074
+        stall? 0
+Test 3 (SW zero): a=0x00851823 b=0x36729abc sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=5 j=11
++-------------------------------------------+
+  instruction A: 0x00851823
+  instruction B: 0x02d7a82a
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 23
+  ID_EX.rd       = 21
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 3
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00851823 b=0x02d7a82a sw1=0xac030070
+        stall? 1
+Test 2 (match B): a=0x00851823 b=0x02d7a82a sw2=0xac150074
+        stall? 0
+Test 3 (SW zero): a=0x00851823 b=0x02d7a82a sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=5 j=12
++-------------------------------------------+
+  instruction A: 0x00851823
+  instruction B: 0x2b38ffff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 24
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 3
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00851823 b=0x2b38ffff sw1=0xac030070
+        stall? 1
+Test 2 (match B): a=0x00851823 b=0x2b38ffff sw2=0xac180074
+        stall? 0
+Test 3 (SW zero): a=0x00851823 b=0x2b38ffff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=5 j=13
++-------------------------------------------+
+  instruction A: 0x00851823
+  instruction B: 0x8c1a0068
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 26
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 3
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00851823 b=0x8c1a0068 sw1=0xac030070
+        stall? 1
+Test 2 (match B): a=0x00851823 b=0x8c1a0068 sw2=0xac1a0074
+        stall? 0
+Test 3 (SW zero): a=0x00851823 b=0x8c1a0068 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=5 j=14
++-------------------------------------------+
+  instruction A: 0x00851823
+  instruction B: 0xac1d006c
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 0
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 29
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 3
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00851823 b=0xac1d006c sw1=0xac030070
+        stall? 1
+Test 2 (match B): a=0x00851823 b=0xac1d006c sw2=0xac1d0074
+        stall? 0
+Test 3 (SW zero): a=0x00851823 b=0xac1d006c sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=5 j=15
++-------------------------------------------+
+  instruction A: 0x00851823
+  instruction B: 0x00000000
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 0
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 3
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x00851823 b=0x00000000 sw1=0xac030070
+        stall? 1
+Skipping Test 2 for this instruction combination, because B appears to "write" to register zero.
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=6 j=0
++-------------------------------------------+
+  instruction A: 0x24e61234
+  instruction B: 0x02328020
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 18
+  ID_EX.rd       = 16
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 6
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x24e61234 b=0x02328020 sw1=0xac060070
+        stall? 1
+Test 2 (match B): a=0x24e61234 b=0x02328020 sw2=0xac100074
+        stall? 0
+Test 3 (SW zero): a=0x24e61234 b=0x02328020 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=6 j=1
++-------------------------------------------+
+  instruction A: 0x24e61234
+  instruction B: 0x02959822
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 21
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 6
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x24e61234 b=0x02959822 sw1=0xac060070
+        stall? 1
+Test 2 (match B): a=0x24e61234 b=0x02959822 sw2=0xac130074
+        stall? 0
+Test 3 (SW zero): a=0x24e61234 b=0x02959822 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=6 j=2
++-------------------------------------------+
+  instruction A: 0x24e61234
+  instruction B: 0x216affff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 10
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 6
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x24e61234 b=0x216affff sw1=0xac060070
+        stall? 1
+Test 2 (match B): a=0x24e61234 b=0x216affff sw2=0xac0a0074
+        stall? 0
+Test 3 (SW zero): a=0x24e61234 b=0x216affff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=6 j=3
++-------------------------------------------+
+  instruction A: 0x24e61234
+  instruction B: 0x21ac0010
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 12
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 6
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x24e61234 b=0x21ac0010 sw1=0xac060070
+        stall? 1
+Test 2 (match B): a=0x24e61234 b=0x21ac0010 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x24e61234 b=0x21ac0010 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=6 j=4
++-------------------------------------------+
+  instruction A: 0x24e61234
+  instruction B: 0x00020821
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 2
+  ID_EX.rd       = 1
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 6
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x24e61234 b=0x00020821 sw1=0xac060070
+        stall? 1
+Test 2 (match B): a=0x24e61234 b=0x00020821 sw2=0xac010074
+        stall? 0
+Test 3 (SW zero): a=0x24e61234 b=0x00020821 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=6 j=5
++-------------------------------------------+
+  instruction A: 0x24e61234
+  instruction B: 0x00851823
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 5
+  ID_EX.rd       = 3
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 6
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x24e61234 b=0x00851823 sw1=0xac060070
+        stall? 1
+Test 2 (match B): a=0x24e61234 b=0x00851823 sw2=0xac030074
+        stall? 0
+Test 3 (SW zero): a=0x24e61234 b=0x00851823 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=6 j=6
++-------------------------------------------+
+  instruction A: 0x24e61234
+  instruction B: 0x24e61234
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 6
+  ID_EX.rd       = 2
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 6
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x24e61234 b=0x24e61234 sw1=0xac060070
+        stall? 0
+Test 2 (match B): a=0x24e61234 b=0x24e61234 sw2=0xac060074
+        stall? 0
+Test 3 (SW zero): a=0x24e61234 b=0x24e61234 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=6 j=7
++-------------------------------------------+
+  instruction A: 0x24e61234
+  instruction B: 0x014b4824
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 11
+  ID_EX.rd       = 9
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 6
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x24e61234 b=0x014b4824 sw1=0xac060070
+        stall? 1
+Test 2 (match B): a=0x24e61234 b=0x014b4824 sw2=0xac090074
+        stall? 0
+Test 3 (SW zero): a=0x24e61234 b=0x014b4824 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=6 j=8
++-------------------------------------------+
+  instruction A: 0x24e61234
+  instruction B: 0x01ae6025
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 14
+  ID_EX.rd       = 12
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 6
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x24e61234 b=0x01ae6025 sw1=0xac060070
+        stall? 1
+Test 2 (match B): a=0x24e61234 b=0x01ae6025 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x24e61234 b=0x01ae6025 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=6 j=9
++-------------------------------------------+
+  instruction A: 0x24e61234
+  instruction B: 0x320f5678
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 15
+  ID_EX.rd       = 10
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 6
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x24e61234 b=0x320f5678 sw1=0xac060070
+        stall? 1
+Test 2 (match B): a=0x24e61234 b=0x320f5678 sw2=0xac0f0074
+        stall? 0
+Test 3 (SW zero): a=0x24e61234 b=0x320f5678 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=6 j=10
++-------------------------------------------+
+  instruction A: 0x24e61234
+  instruction B: 0x36729abc
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 18
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 6
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x24e61234 b=0x36729abc sw1=0xac060070
+        stall? 1
+Test 2 (match B): a=0x24e61234 b=0x36729abc sw2=0xac120074
+        stall? 0
+Test 3 (SW zero): a=0x24e61234 b=0x36729abc sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=6 j=11
++-------------------------------------------+
+  instruction A: 0x24e61234
+  instruction B: 0x02d7a82a
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 23
+  ID_EX.rd       = 21
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 6
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x24e61234 b=0x02d7a82a sw1=0xac060070
+        stall? 1
+Test 2 (match B): a=0x24e61234 b=0x02d7a82a sw2=0xac150074
+        stall? 0
+Test 3 (SW zero): a=0x24e61234 b=0x02d7a82a sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=6 j=12
++-------------------------------------------+
+  instruction A: 0x24e61234
+  instruction B: 0x2b38ffff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 24
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 6
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x24e61234 b=0x2b38ffff sw1=0xac060070
+        stall? 1
+Test 2 (match B): a=0x24e61234 b=0x2b38ffff sw2=0xac180074
+        stall? 0
+Test 3 (SW zero): a=0x24e61234 b=0x2b38ffff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=6 j=13
++-------------------------------------------+
+  instruction A: 0x24e61234
+  instruction B: 0x8c1a0068
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 26
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 6
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x24e61234 b=0x8c1a0068 sw1=0xac060070
+        stall? 1
+Test 2 (match B): a=0x24e61234 b=0x8c1a0068 sw2=0xac1a0074
+        stall? 0
+Test 3 (SW zero): a=0x24e61234 b=0x8c1a0068 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=6 j=14
++-------------------------------------------+
+  instruction A: 0x24e61234
+  instruction B: 0xac1d006c
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 0
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 29
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 6
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x24e61234 b=0xac1d006c sw1=0xac060070
+        stall? 1
+Test 2 (match B): a=0x24e61234 b=0xac1d006c sw2=0xac1d0074
+        stall? 0
+Test 3 (SW zero): a=0x24e61234 b=0xac1d006c sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=6 j=15
++-------------------------------------------+
+  instruction A: 0x24e61234
+  instruction B: 0x00000000
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 0
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 6
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x24e61234 b=0x00000000 sw1=0xac060070
+        stall? 1
+Skipping Test 2 for this instruction combination, because B appears to "write" to register zero.
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=7 j=0
++-------------------------------------------+
+  instruction A: 0x014b4824
+  instruction B: 0x02328020
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 18
+  ID_EX.rd       = 16
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 9
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x014b4824 b=0x02328020 sw1=0xac090070
+        stall? 1
+Test 2 (match B): a=0x014b4824 b=0x02328020 sw2=0xac100074
+        stall? 0
+Test 3 (SW zero): a=0x014b4824 b=0x02328020 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=7 j=1
++-------------------------------------------+
+  instruction A: 0x014b4824
+  instruction B: 0x02959822
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 21
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 9
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x014b4824 b=0x02959822 sw1=0xac090070
+        stall? 1
+Test 2 (match B): a=0x014b4824 b=0x02959822 sw2=0xac130074
+        stall? 0
+Test 3 (SW zero): a=0x014b4824 b=0x02959822 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=7 j=2
++-------------------------------------------+
+  instruction A: 0x014b4824
+  instruction B: 0x216affff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 10
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 9
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x014b4824 b=0x216affff sw1=0xac090070
+        stall? 1
+Test 2 (match B): a=0x014b4824 b=0x216affff sw2=0xac0a0074
+        stall? 0
+Test 3 (SW zero): a=0x014b4824 b=0x216affff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=7 j=3
++-------------------------------------------+
+  instruction A: 0x014b4824
+  instruction B: 0x21ac0010
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 12
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 9
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x014b4824 b=0x21ac0010 sw1=0xac090070
+        stall? 1
+Test 2 (match B): a=0x014b4824 b=0x21ac0010 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x014b4824 b=0x21ac0010 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=7 j=4
++-------------------------------------------+
+  instruction A: 0x014b4824
+  instruction B: 0x00020821
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 2
+  ID_EX.rd       = 1
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 9
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x014b4824 b=0x00020821 sw1=0xac090070
+        stall? 1
+Test 2 (match B): a=0x014b4824 b=0x00020821 sw2=0xac010074
+        stall? 0
+Test 3 (SW zero): a=0x014b4824 b=0x00020821 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=7 j=5
++-------------------------------------------+
+  instruction A: 0x014b4824
+  instruction B: 0x00851823
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 5
+  ID_EX.rd       = 3
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 9
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x014b4824 b=0x00851823 sw1=0xac090070
+        stall? 1
+Test 2 (match B): a=0x014b4824 b=0x00851823 sw2=0xac030074
+        stall? 0
+Test 3 (SW zero): a=0x014b4824 b=0x00851823 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=7 j=6
++-------------------------------------------+
+  instruction A: 0x014b4824
+  instruction B: 0x24e61234
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 6
+  ID_EX.rd       = 2
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 9
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x014b4824 b=0x24e61234 sw1=0xac090070
+        stall? 1
+Test 2 (match B): a=0x014b4824 b=0x24e61234 sw2=0xac060074
+        stall? 0
+Test 3 (SW zero): a=0x014b4824 b=0x24e61234 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=7 j=7
++-------------------------------------------+
+  instruction A: 0x014b4824
+  instruction B: 0x014b4824
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 11
+  ID_EX.rd       = 9
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 9
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x014b4824 b=0x014b4824 sw1=0xac090070
+        stall? 0
+Test 2 (match B): a=0x014b4824 b=0x014b4824 sw2=0xac090074
+        stall? 0
+Test 3 (SW zero): a=0x014b4824 b=0x014b4824 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=7 j=8
++-------------------------------------------+
+  instruction A: 0x014b4824
+  instruction B: 0x01ae6025
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 14
+  ID_EX.rd       = 12
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 9
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x014b4824 b=0x01ae6025 sw1=0xac090070
+        stall? 1
+Test 2 (match B): a=0x014b4824 b=0x01ae6025 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x014b4824 b=0x01ae6025 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=7 j=9
++-------------------------------------------+
+  instruction A: 0x014b4824
+  instruction B: 0x320f5678
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 15
+  ID_EX.rd       = 10
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 9
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x014b4824 b=0x320f5678 sw1=0xac090070
+        stall? 1
+Test 2 (match B): a=0x014b4824 b=0x320f5678 sw2=0xac0f0074
+        stall? 0
+Test 3 (SW zero): a=0x014b4824 b=0x320f5678 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=7 j=10
++-------------------------------------------+
+  instruction A: 0x014b4824
+  instruction B: 0x36729abc
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 18
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 9
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x014b4824 b=0x36729abc sw1=0xac090070
+        stall? 1
+Test 2 (match B): a=0x014b4824 b=0x36729abc sw2=0xac120074
+        stall? 0
+Test 3 (SW zero): a=0x014b4824 b=0x36729abc sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=7 j=11
++-------------------------------------------+
+  instruction A: 0x014b4824
+  instruction B: 0x02d7a82a
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 23
+  ID_EX.rd       = 21
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 9
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x014b4824 b=0x02d7a82a sw1=0xac090070
+        stall? 1
+Test 2 (match B): a=0x014b4824 b=0x02d7a82a sw2=0xac150074
+        stall? 0
+Test 3 (SW zero): a=0x014b4824 b=0x02d7a82a sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=7 j=12
++-------------------------------------------+
+  instruction A: 0x014b4824
+  instruction B: 0x2b38ffff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 24
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 9
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x014b4824 b=0x2b38ffff sw1=0xac090070
+        stall? 1
+Test 2 (match B): a=0x014b4824 b=0x2b38ffff sw2=0xac180074
+        stall? 0
+Test 3 (SW zero): a=0x014b4824 b=0x2b38ffff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=7 j=13
++-------------------------------------------+
+  instruction A: 0x014b4824
+  instruction B: 0x8c1a0068
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 26
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 9
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x014b4824 b=0x8c1a0068 sw1=0xac090070
+        stall? 1
+Test 2 (match B): a=0x014b4824 b=0x8c1a0068 sw2=0xac1a0074
+        stall? 0
+Test 3 (SW zero): a=0x014b4824 b=0x8c1a0068 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=7 j=14
++-------------------------------------------+
+  instruction A: 0x014b4824
+  instruction B: 0xac1d006c
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 0
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 29
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 9
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x014b4824 b=0xac1d006c sw1=0xac090070
+        stall? 1
+Test 2 (match B): a=0x014b4824 b=0xac1d006c sw2=0xac1d0074
+        stall? 0
+Test 3 (SW zero): a=0x014b4824 b=0xac1d006c sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=7 j=15
++-------------------------------------------+
+  instruction A: 0x014b4824
+  instruction B: 0x00000000
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 0
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 9
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x014b4824 b=0x00000000 sw1=0xac090070
+        stall? 1
+Skipping Test 2 for this instruction combination, because B appears to "write" to register zero.
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=8 j=0
++-------------------------------------------+
+  instruction A: 0x01ae6025
+  instruction B: 0x02328020
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 18
+  ID_EX.rd       = 16
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x01ae6025 b=0x02328020 sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x01ae6025 b=0x02328020 sw2=0xac100074
+        stall? 0
+Test 3 (SW zero): a=0x01ae6025 b=0x02328020 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=8 j=1
++-------------------------------------------+
+  instruction A: 0x01ae6025
+  instruction B: 0x02959822
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 21
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x01ae6025 b=0x02959822 sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x01ae6025 b=0x02959822 sw2=0xac130074
+        stall? 0
+Test 3 (SW zero): a=0x01ae6025 b=0x02959822 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=8 j=2
++-------------------------------------------+
+  instruction A: 0x01ae6025
+  instruction B: 0x216affff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 10
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x01ae6025 b=0x216affff sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x01ae6025 b=0x216affff sw2=0xac0a0074
+        stall? 0
+Test 3 (SW zero): a=0x01ae6025 b=0x216affff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=8 j=3
++-------------------------------------------+
+  instruction A: 0x01ae6025
+  instruction B: 0x21ac0010
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 12
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x01ae6025 b=0x21ac0010 sw1=0xac0c0070
+        stall? 0
+Test 2 (match B): a=0x01ae6025 b=0x21ac0010 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x01ae6025 b=0x21ac0010 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=8 j=4
++-------------------------------------------+
+  instruction A: 0x01ae6025
+  instruction B: 0x00020821
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 2
+  ID_EX.rd       = 1
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x01ae6025 b=0x00020821 sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x01ae6025 b=0x00020821 sw2=0xac010074
+        stall? 0
+Test 3 (SW zero): a=0x01ae6025 b=0x00020821 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=8 j=5
++-------------------------------------------+
+  instruction A: 0x01ae6025
+  instruction B: 0x00851823
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 5
+  ID_EX.rd       = 3
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x01ae6025 b=0x00851823 sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x01ae6025 b=0x00851823 sw2=0xac030074
+        stall? 0
+Test 3 (SW zero): a=0x01ae6025 b=0x00851823 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=8 j=6
++-------------------------------------------+
+  instruction A: 0x01ae6025
+  instruction B: 0x24e61234
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 6
+  ID_EX.rd       = 2
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x01ae6025 b=0x24e61234 sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x01ae6025 b=0x24e61234 sw2=0xac060074
+        stall? 0
+Test 3 (SW zero): a=0x01ae6025 b=0x24e61234 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=8 j=7
++-------------------------------------------+
+  instruction A: 0x01ae6025
+  instruction B: 0x014b4824
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 11
+  ID_EX.rd       = 9
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x01ae6025 b=0x014b4824 sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x01ae6025 b=0x014b4824 sw2=0xac090074
+        stall? 0
+Test 3 (SW zero): a=0x01ae6025 b=0x014b4824 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=8 j=8
++-------------------------------------------+
+  instruction A: 0x01ae6025
+  instruction B: 0x01ae6025
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 14
+  ID_EX.rd       = 12
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x01ae6025 b=0x01ae6025 sw1=0xac0c0070
+        stall? 0
+Test 2 (match B): a=0x01ae6025 b=0x01ae6025 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x01ae6025 b=0x01ae6025 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=8 j=9
++-------------------------------------------+
+  instruction A: 0x01ae6025
+  instruction B: 0x320f5678
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 15
+  ID_EX.rd       = 10
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x01ae6025 b=0x320f5678 sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x01ae6025 b=0x320f5678 sw2=0xac0f0074
+        stall? 0
+Test 3 (SW zero): a=0x01ae6025 b=0x320f5678 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=8 j=10
++-------------------------------------------+
+  instruction A: 0x01ae6025
+  instruction B: 0x36729abc
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 18
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x01ae6025 b=0x36729abc sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x01ae6025 b=0x36729abc sw2=0xac120074
+        stall? 0
+Test 3 (SW zero): a=0x01ae6025 b=0x36729abc sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=8 j=11
++-------------------------------------------+
+  instruction A: 0x01ae6025
+  instruction B: 0x02d7a82a
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 23
+  ID_EX.rd       = 21
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x01ae6025 b=0x02d7a82a sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x01ae6025 b=0x02d7a82a sw2=0xac150074
+        stall? 0
+Test 3 (SW zero): a=0x01ae6025 b=0x02d7a82a sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=8 j=12
++-------------------------------------------+
+  instruction A: 0x01ae6025
+  instruction B: 0x2b38ffff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 24
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x01ae6025 b=0x2b38ffff sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x01ae6025 b=0x2b38ffff sw2=0xac180074
+        stall? 0
+Test 3 (SW zero): a=0x01ae6025 b=0x2b38ffff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=8 j=13
++-------------------------------------------+
+  instruction A: 0x01ae6025
+  instruction B: 0x8c1a0068
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 26
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x01ae6025 b=0x8c1a0068 sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x01ae6025 b=0x8c1a0068 sw2=0xac1a0074
+        stall? 0
+Test 3 (SW zero): a=0x01ae6025 b=0x8c1a0068 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=8 j=14
++-------------------------------------------+
+  instruction A: 0x01ae6025
+  instruction B: 0xac1d006c
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 0
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 29
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x01ae6025 b=0xac1d006c sw1=0xac0c0070
+        stall? 1
+Test 2 (match B): a=0x01ae6025 b=0xac1d006c sw2=0xac1d0074
+        stall? 0
+Test 3 (SW zero): a=0x01ae6025 b=0xac1d006c sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=8 j=15
++-------------------------------------------+
+  instruction A: 0x01ae6025
+  instruction B: 0x00000000
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 0
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 12
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x01ae6025 b=0x00000000 sw1=0xac0c0070
+        stall? 1
+Skipping Test 2 for this instruction combination, because B appears to "write" to register zero.
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=9 j=0
++-------------------------------------------+
+  instruction A: 0x320f5678
+  instruction B: 0x02328020
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 18
+  ID_EX.rd       = 16
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 15
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x320f5678 b=0x02328020 sw1=0xac0f0070
+        stall? 1
+Test 2 (match B): a=0x320f5678 b=0x02328020 sw2=0xac100074
+        stall? 0
+Test 3 (SW zero): a=0x320f5678 b=0x02328020 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=9 j=1
++-------------------------------------------+
+  instruction A: 0x320f5678
+  instruction B: 0x02959822
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 21
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 15
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x320f5678 b=0x02959822 sw1=0xac0f0070
+        stall? 1
+Test 2 (match B): a=0x320f5678 b=0x02959822 sw2=0xac130074
+        stall? 0
+Test 3 (SW zero): a=0x320f5678 b=0x02959822 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=9 j=2
++-------------------------------------------+
+  instruction A: 0x320f5678
+  instruction B: 0x216affff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 10
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 15
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x320f5678 b=0x216affff sw1=0xac0f0070
+        stall? 1
+Test 2 (match B): a=0x320f5678 b=0x216affff sw2=0xac0a0074
+        stall? 0
+Test 3 (SW zero): a=0x320f5678 b=0x216affff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=9 j=3
++-------------------------------------------+
+  instruction A: 0x320f5678
+  instruction B: 0x21ac0010
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 12
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 15
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x320f5678 b=0x21ac0010 sw1=0xac0f0070
+        stall? 1
+Test 2 (match B): a=0x320f5678 b=0x21ac0010 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x320f5678 b=0x21ac0010 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=9 j=4
++-------------------------------------------+
+  instruction A: 0x320f5678
+  instruction B: 0x00020821
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 2
+  ID_EX.rd       = 1
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 15
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x320f5678 b=0x00020821 sw1=0xac0f0070
+        stall? 1
+Test 2 (match B): a=0x320f5678 b=0x00020821 sw2=0xac010074
+        stall? 0
+Test 3 (SW zero): a=0x320f5678 b=0x00020821 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=9 j=5
++-------------------------------------------+
+  instruction A: 0x320f5678
+  instruction B: 0x00851823
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 5
+  ID_EX.rd       = 3
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 15
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x320f5678 b=0x00851823 sw1=0xac0f0070
+        stall? 1
+Test 2 (match B): a=0x320f5678 b=0x00851823 sw2=0xac030074
+        stall? 0
+Test 3 (SW zero): a=0x320f5678 b=0x00851823 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=9 j=6
++-------------------------------------------+
+  instruction A: 0x320f5678
+  instruction B: 0x24e61234
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 6
+  ID_EX.rd       = 2
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 15
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x320f5678 b=0x24e61234 sw1=0xac0f0070
+        stall? 1
+Test 2 (match B): a=0x320f5678 b=0x24e61234 sw2=0xac060074
+        stall? 0
+Test 3 (SW zero): a=0x320f5678 b=0x24e61234 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=9 j=7
++-------------------------------------------+
+  instruction A: 0x320f5678
+  instruction B: 0x014b4824
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 11
+  ID_EX.rd       = 9
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 15
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x320f5678 b=0x014b4824 sw1=0xac0f0070
+        stall? 1
+Test 2 (match B): a=0x320f5678 b=0x014b4824 sw2=0xac090074
+        stall? 0
+Test 3 (SW zero): a=0x320f5678 b=0x014b4824 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=9 j=8
++-------------------------------------------+
+  instruction A: 0x320f5678
+  instruction B: 0x01ae6025
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 14
+  ID_EX.rd       = 12
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 15
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x320f5678 b=0x01ae6025 sw1=0xac0f0070
+        stall? 1
+Test 2 (match B): a=0x320f5678 b=0x01ae6025 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x320f5678 b=0x01ae6025 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=9 j=9
++-------------------------------------------+
+  instruction A: 0x320f5678
+  instruction B: 0x320f5678
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 15
+  ID_EX.rd       = 10
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 15
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x320f5678 b=0x320f5678 sw1=0xac0f0070
+        stall? 0
+Test 2 (match B): a=0x320f5678 b=0x320f5678 sw2=0xac0f0074
+        stall? 0
+Test 3 (SW zero): a=0x320f5678 b=0x320f5678 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=9 j=10
++-------------------------------------------+
+  instruction A: 0x320f5678
+  instruction B: 0x36729abc
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 18
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 15
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x320f5678 b=0x36729abc sw1=0xac0f0070
+        stall? 1
+Test 2 (match B): a=0x320f5678 b=0x36729abc sw2=0xac120074
+        stall? 0
+Test 3 (SW zero): a=0x320f5678 b=0x36729abc sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=9 j=11
++-------------------------------------------+
+  instruction A: 0x320f5678
+  instruction B: 0x02d7a82a
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 23
+  ID_EX.rd       = 21
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 15
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x320f5678 b=0x02d7a82a sw1=0xac0f0070
+        stall? 1
+Test 2 (match B): a=0x320f5678 b=0x02d7a82a sw2=0xac150074
+        stall? 0
+Test 3 (SW zero): a=0x320f5678 b=0x02d7a82a sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=9 j=12
++-------------------------------------------+
+  instruction A: 0x320f5678
+  instruction B: 0x2b38ffff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 24
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 15
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x320f5678 b=0x2b38ffff sw1=0xac0f0070
+        stall? 1
+Test 2 (match B): a=0x320f5678 b=0x2b38ffff sw2=0xac180074
+        stall? 0
+Test 3 (SW zero): a=0x320f5678 b=0x2b38ffff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=9 j=13
++-------------------------------------------+
+  instruction A: 0x320f5678
+  instruction B: 0x8c1a0068
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 26
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 15
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x320f5678 b=0x8c1a0068 sw1=0xac0f0070
+        stall? 1
+Test 2 (match B): a=0x320f5678 b=0x8c1a0068 sw2=0xac1a0074
+        stall? 0
+Test 3 (SW zero): a=0x320f5678 b=0x8c1a0068 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=9 j=14
++-------------------------------------------+
+  instruction A: 0x320f5678
+  instruction B: 0xac1d006c
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 0
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 29
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 15
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x320f5678 b=0xac1d006c sw1=0xac0f0070
+        stall? 1
+Test 2 (match B): a=0x320f5678 b=0xac1d006c sw2=0xac1d0074
+        stall? 0
+Test 3 (SW zero): a=0x320f5678 b=0xac1d006c sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=9 j=15
++-------------------------------------------+
+  instruction A: 0x320f5678
+  instruction B: 0x00000000
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 0
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 15
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x320f5678 b=0x00000000 sw1=0xac0f0070
+        stall? 1
+Skipping Test 2 for this instruction combination, because B appears to "write" to register zero.
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=10 j=0
++-------------------------------------------+
+  instruction A: 0x36729abc
+  instruction B: 0x02328020
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 18
+  ID_EX.rd       = 16
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 18
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x36729abc b=0x02328020 sw1=0xac120070
+        stall? 1
+Test 2 (match B): a=0x36729abc b=0x02328020 sw2=0xac100074
+        stall? 0
+Test 3 (SW zero): a=0x36729abc b=0x02328020 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=10 j=1
++-------------------------------------------+
+  instruction A: 0x36729abc
+  instruction B: 0x02959822
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 21
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 18
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x36729abc b=0x02959822 sw1=0xac120070
+        stall? 1
+Test 2 (match B): a=0x36729abc b=0x02959822 sw2=0xac130074
+        stall? 0
+Test 3 (SW zero): a=0x36729abc b=0x02959822 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=10 j=2
++-------------------------------------------+
+  instruction A: 0x36729abc
+  instruction B: 0x216affff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 10
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 18
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x36729abc b=0x216affff sw1=0xac120070
+        stall? 1
+Test 2 (match B): a=0x36729abc b=0x216affff sw2=0xac0a0074
+        stall? 0
+Test 3 (SW zero): a=0x36729abc b=0x216affff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=10 j=3
++-------------------------------------------+
+  instruction A: 0x36729abc
+  instruction B: 0x21ac0010
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 12
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 18
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x36729abc b=0x21ac0010 sw1=0xac120070
+        stall? 1
+Test 2 (match B): a=0x36729abc b=0x21ac0010 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x36729abc b=0x21ac0010 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=10 j=4
++-------------------------------------------+
+  instruction A: 0x36729abc
+  instruction B: 0x00020821
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 2
+  ID_EX.rd       = 1
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 18
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x36729abc b=0x00020821 sw1=0xac120070
+        stall? 1
+Test 2 (match B): a=0x36729abc b=0x00020821 sw2=0xac010074
+        stall? 0
+Test 3 (SW zero): a=0x36729abc b=0x00020821 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=10 j=5
++-------------------------------------------+
+  instruction A: 0x36729abc
+  instruction B: 0x00851823
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 5
+  ID_EX.rd       = 3
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 18
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x36729abc b=0x00851823 sw1=0xac120070
+        stall? 1
+Test 2 (match B): a=0x36729abc b=0x00851823 sw2=0xac030074
+        stall? 0
+Test 3 (SW zero): a=0x36729abc b=0x00851823 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=10 j=6
++-------------------------------------------+
+  instruction A: 0x36729abc
+  instruction B: 0x24e61234
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 6
+  ID_EX.rd       = 2
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 18
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x36729abc b=0x24e61234 sw1=0xac120070
+        stall? 1
+Test 2 (match B): a=0x36729abc b=0x24e61234 sw2=0xac060074
+        stall? 0
+Test 3 (SW zero): a=0x36729abc b=0x24e61234 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=10 j=7
++-------------------------------------------+
+  instruction A: 0x36729abc
+  instruction B: 0x014b4824
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 11
+  ID_EX.rd       = 9
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 18
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x36729abc b=0x014b4824 sw1=0xac120070
+        stall? 1
+Test 2 (match B): a=0x36729abc b=0x014b4824 sw2=0xac090074
+        stall? 0
+Test 3 (SW zero): a=0x36729abc b=0x014b4824 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=10 j=8
++-------------------------------------------+
+  instruction A: 0x36729abc
+  instruction B: 0x01ae6025
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 14
+  ID_EX.rd       = 12
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 18
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x36729abc b=0x01ae6025 sw1=0xac120070
+        stall? 1
+Test 2 (match B): a=0x36729abc b=0x01ae6025 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x36729abc b=0x01ae6025 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=10 j=9
++-------------------------------------------+
+  instruction A: 0x36729abc
+  instruction B: 0x320f5678
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 15
+  ID_EX.rd       = 10
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 18
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x36729abc b=0x320f5678 sw1=0xac120070
+        stall? 1
+Test 2 (match B): a=0x36729abc b=0x320f5678 sw2=0xac0f0074
+        stall? 0
+Test 3 (SW zero): a=0x36729abc b=0x320f5678 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=10 j=10
++-------------------------------------------+
+  instruction A: 0x36729abc
+  instruction B: 0x36729abc
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 18
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 18
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x36729abc b=0x36729abc sw1=0xac120070
+        stall? 0
+Test 2 (match B): a=0x36729abc b=0x36729abc sw2=0xac120074
+        stall? 0
+Test 3 (SW zero): a=0x36729abc b=0x36729abc sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=10 j=11
++-------------------------------------------+
+  instruction A: 0x36729abc
+  instruction B: 0x02d7a82a
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 23
+  ID_EX.rd       = 21
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 18
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x36729abc b=0x02d7a82a sw1=0xac120070
+        stall? 1
+Test 2 (match B): a=0x36729abc b=0x02d7a82a sw2=0xac150074
+        stall? 0
+Test 3 (SW zero): a=0x36729abc b=0x02d7a82a sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=10 j=12
++-------------------------------------------+
+  instruction A: 0x36729abc
+  instruction B: 0x2b38ffff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 24
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 18
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x36729abc b=0x2b38ffff sw1=0xac120070
+        stall? 1
+Test 2 (match B): a=0x36729abc b=0x2b38ffff sw2=0xac180074
+        stall? 0
+Test 3 (SW zero): a=0x36729abc b=0x2b38ffff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=10 j=13
++-------------------------------------------+
+  instruction A: 0x36729abc
+  instruction B: 0x8c1a0068
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 26
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 18
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x36729abc b=0x8c1a0068 sw1=0xac120070
+        stall? 1
+Test 2 (match B): a=0x36729abc b=0x8c1a0068 sw2=0xac1a0074
+        stall? 0
+Test 3 (SW zero): a=0x36729abc b=0x8c1a0068 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=10 j=14
++-------------------------------------------+
+  instruction A: 0x36729abc
+  instruction B: 0xac1d006c
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 0
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 29
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 18
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x36729abc b=0xac1d006c sw1=0xac120070
+        stall? 1
+Test 2 (match B): a=0x36729abc b=0xac1d006c sw2=0xac1d0074
+        stall? 0
+Test 3 (SW zero): a=0x36729abc b=0xac1d006c sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=10 j=15
++-------------------------------------------+
+  instruction A: 0x36729abc
+  instruction B: 0x00000000
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 0
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 18
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x36729abc b=0x00000000 sw1=0xac120070
+        stall? 1
+Skipping Test 2 for this instruction combination, because B appears to "write" to register zero.
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=11 j=0
++-------------------------------------------+
+  instruction A: 0x02d7a82a
+  instruction B: 0x02328020
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 18
+  ID_EX.rd       = 16
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 21
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02d7a82a b=0x02328020 sw1=0xac150070
+        stall? 1
+Test 2 (match B): a=0x02d7a82a b=0x02328020 sw2=0xac100074
+        stall? 0
+Test 3 (SW zero): a=0x02d7a82a b=0x02328020 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=11 j=1
++-------------------------------------------+
+  instruction A: 0x02d7a82a
+  instruction B: 0x02959822
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 21
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 21
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02d7a82a b=0x02959822 sw1=0xac150070
+        stall? 1
+Test 2 (match B): a=0x02d7a82a b=0x02959822 sw2=0xac130074
+        stall? 0
+Test 3 (SW zero): a=0x02d7a82a b=0x02959822 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=11 j=2
++-------------------------------------------+
+  instruction A: 0x02d7a82a
+  instruction B: 0x216affff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 10
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 21
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02d7a82a b=0x216affff sw1=0xac150070
+        stall? 1
+Test 2 (match B): a=0x02d7a82a b=0x216affff sw2=0xac0a0074
+        stall? 0
+Test 3 (SW zero): a=0x02d7a82a b=0x216affff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=11 j=3
++-------------------------------------------+
+  instruction A: 0x02d7a82a
+  instruction B: 0x21ac0010
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 12
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 21
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02d7a82a b=0x21ac0010 sw1=0xac150070
+        stall? 1
+Test 2 (match B): a=0x02d7a82a b=0x21ac0010 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x02d7a82a b=0x21ac0010 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=11 j=4
++-------------------------------------------+
+  instruction A: 0x02d7a82a
+  instruction B: 0x00020821
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 2
+  ID_EX.rd       = 1
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 21
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02d7a82a b=0x00020821 sw1=0xac150070
+        stall? 1
+Test 2 (match B): a=0x02d7a82a b=0x00020821 sw2=0xac010074
+        stall? 0
+Test 3 (SW zero): a=0x02d7a82a b=0x00020821 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=11 j=5
++-------------------------------------------+
+  instruction A: 0x02d7a82a
+  instruction B: 0x00851823
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 5
+  ID_EX.rd       = 3
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 21
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02d7a82a b=0x00851823 sw1=0xac150070
+        stall? 1
+Test 2 (match B): a=0x02d7a82a b=0x00851823 sw2=0xac030074
+        stall? 0
+Test 3 (SW zero): a=0x02d7a82a b=0x00851823 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=11 j=6
++-------------------------------------------+
+  instruction A: 0x02d7a82a
+  instruction B: 0x24e61234
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 6
+  ID_EX.rd       = 2
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 21
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02d7a82a b=0x24e61234 sw1=0xac150070
+        stall? 1
+Test 2 (match B): a=0x02d7a82a b=0x24e61234 sw2=0xac060074
+        stall? 0
+Test 3 (SW zero): a=0x02d7a82a b=0x24e61234 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=11 j=7
++-------------------------------------------+
+  instruction A: 0x02d7a82a
+  instruction B: 0x014b4824
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 11
+  ID_EX.rd       = 9
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 21
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02d7a82a b=0x014b4824 sw1=0xac150070
+        stall? 1
+Test 2 (match B): a=0x02d7a82a b=0x014b4824 sw2=0xac090074
+        stall? 0
+Test 3 (SW zero): a=0x02d7a82a b=0x014b4824 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=11 j=8
++-------------------------------------------+
+  instruction A: 0x02d7a82a
+  instruction B: 0x01ae6025
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 14
+  ID_EX.rd       = 12
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 21
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02d7a82a b=0x01ae6025 sw1=0xac150070
+        stall? 1
+Test 2 (match B): a=0x02d7a82a b=0x01ae6025 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x02d7a82a b=0x01ae6025 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=11 j=9
++-------------------------------------------+
+  instruction A: 0x02d7a82a
+  instruction B: 0x320f5678
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 15
+  ID_EX.rd       = 10
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 21
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02d7a82a b=0x320f5678 sw1=0xac150070
+        stall? 1
+Test 2 (match B): a=0x02d7a82a b=0x320f5678 sw2=0xac0f0074
+        stall? 0
+Test 3 (SW zero): a=0x02d7a82a b=0x320f5678 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=11 j=10
++-------------------------------------------+
+  instruction A: 0x02d7a82a
+  instruction B: 0x36729abc
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 18
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 21
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02d7a82a b=0x36729abc sw1=0xac150070
+        stall? 1
+Test 2 (match B): a=0x02d7a82a b=0x36729abc sw2=0xac120074
+        stall? 0
+Test 3 (SW zero): a=0x02d7a82a b=0x36729abc sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=11 j=11
++-------------------------------------------+
+  instruction A: 0x02d7a82a
+  instruction B: 0x02d7a82a
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 23
+  ID_EX.rd       = 21
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 21
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02d7a82a b=0x02d7a82a sw1=0xac150070
+        stall? 0
+Test 2 (match B): a=0x02d7a82a b=0x02d7a82a sw2=0xac150074
+        stall? 0
+Test 3 (SW zero): a=0x02d7a82a b=0x02d7a82a sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=11 j=12
++-------------------------------------------+
+  instruction A: 0x02d7a82a
+  instruction B: 0x2b38ffff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 24
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 21
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02d7a82a b=0x2b38ffff sw1=0xac150070
+        stall? 1
+Test 2 (match B): a=0x02d7a82a b=0x2b38ffff sw2=0xac180074
+        stall? 0
+Test 3 (SW zero): a=0x02d7a82a b=0x2b38ffff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=11 j=13
++-------------------------------------------+
+  instruction A: 0x02d7a82a
+  instruction B: 0x8c1a0068
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 26
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 21
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02d7a82a b=0x8c1a0068 sw1=0xac150070
+        stall? 1
+Test 2 (match B): a=0x02d7a82a b=0x8c1a0068 sw2=0xac1a0074
+        stall? 0
+Test 3 (SW zero): a=0x02d7a82a b=0x8c1a0068 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=11 j=14
++-------------------------------------------+
+  instruction A: 0x02d7a82a
+  instruction B: 0xac1d006c
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 0
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 29
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 21
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02d7a82a b=0xac1d006c sw1=0xac150070
+        stall? 1
+Test 2 (match B): a=0x02d7a82a b=0xac1d006c sw2=0xac1d0074
+        stall? 0
+Test 3 (SW zero): a=0x02d7a82a b=0xac1d006c sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=11 j=15
++-------------------------------------------+
+  instruction A: 0x02d7a82a
+  instruction B: 0x00000000
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 0
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 21
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x02d7a82a b=0x00000000 sw1=0xac150070
+        stall? 1
+Skipping Test 2 for this instruction combination, because B appears to "write" to register zero.
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=12 j=0
++-------------------------------------------+
+  instruction A: 0x2b38ffff
+  instruction B: 0x02328020
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 18
+  ID_EX.rd       = 16
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 24
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x2b38ffff b=0x02328020 sw1=0xac180070
+        stall? 1
+Test 2 (match B): a=0x2b38ffff b=0x02328020 sw2=0xac100074
+        stall? 0
+Test 3 (SW zero): a=0x2b38ffff b=0x02328020 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=12 j=1
++-------------------------------------------+
+  instruction A: 0x2b38ffff
+  instruction B: 0x02959822
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 21
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 24
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x2b38ffff b=0x02959822 sw1=0xac180070
+        stall? 1
+Test 2 (match B): a=0x2b38ffff b=0x02959822 sw2=0xac130074
+        stall? 0
+Test 3 (SW zero): a=0x2b38ffff b=0x02959822 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=12 j=2
++-------------------------------------------+
+  instruction A: 0x2b38ffff
+  instruction B: 0x216affff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 10
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 24
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x2b38ffff b=0x216affff sw1=0xac180070
+        stall? 1
+Test 2 (match B): a=0x2b38ffff b=0x216affff sw2=0xac0a0074
+        stall? 0
+Test 3 (SW zero): a=0x2b38ffff b=0x216affff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=12 j=3
++-------------------------------------------+
+  instruction A: 0x2b38ffff
+  instruction B: 0x21ac0010
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 12
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 24
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x2b38ffff b=0x21ac0010 sw1=0xac180070
+        stall? 1
+Test 2 (match B): a=0x2b38ffff b=0x21ac0010 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x2b38ffff b=0x21ac0010 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=12 j=4
++-------------------------------------------+
+  instruction A: 0x2b38ffff
+  instruction B: 0x00020821
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 2
+  ID_EX.rd       = 1
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 24
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x2b38ffff b=0x00020821 sw1=0xac180070
+        stall? 1
+Test 2 (match B): a=0x2b38ffff b=0x00020821 sw2=0xac010074
+        stall? 0
+Test 3 (SW zero): a=0x2b38ffff b=0x00020821 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=12 j=5
++-------------------------------------------+
+  instruction A: 0x2b38ffff
+  instruction B: 0x00851823
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 5
+  ID_EX.rd       = 3
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 24
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x2b38ffff b=0x00851823 sw1=0xac180070
+        stall? 1
+Test 2 (match B): a=0x2b38ffff b=0x00851823 sw2=0xac030074
+        stall? 0
+Test 3 (SW zero): a=0x2b38ffff b=0x00851823 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=12 j=6
++-------------------------------------------+
+  instruction A: 0x2b38ffff
+  instruction B: 0x24e61234
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 6
+  ID_EX.rd       = 2
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 24
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x2b38ffff b=0x24e61234 sw1=0xac180070
+        stall? 1
+Test 2 (match B): a=0x2b38ffff b=0x24e61234 sw2=0xac060074
+        stall? 0
+Test 3 (SW zero): a=0x2b38ffff b=0x24e61234 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=12 j=7
++-------------------------------------------+
+  instruction A: 0x2b38ffff
+  instruction B: 0x014b4824
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 11
+  ID_EX.rd       = 9
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 24
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x2b38ffff b=0x014b4824 sw1=0xac180070
+        stall? 1
+Test 2 (match B): a=0x2b38ffff b=0x014b4824 sw2=0xac090074
+        stall? 0
+Test 3 (SW zero): a=0x2b38ffff b=0x014b4824 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=12 j=8
++-------------------------------------------+
+  instruction A: 0x2b38ffff
+  instruction B: 0x01ae6025
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 14
+  ID_EX.rd       = 12
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 24
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x2b38ffff b=0x01ae6025 sw1=0xac180070
+        stall? 1
+Test 2 (match B): a=0x2b38ffff b=0x01ae6025 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x2b38ffff b=0x01ae6025 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=12 j=9
++-------------------------------------------+
+  instruction A: 0x2b38ffff
+  instruction B: 0x320f5678
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 15
+  ID_EX.rd       = 10
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 24
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x2b38ffff b=0x320f5678 sw1=0xac180070
+        stall? 1
+Test 2 (match B): a=0x2b38ffff b=0x320f5678 sw2=0xac0f0074
+        stall? 0
+Test 3 (SW zero): a=0x2b38ffff b=0x320f5678 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=12 j=10
++-------------------------------------------+
+  instruction A: 0x2b38ffff
+  instruction B: 0x36729abc
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 18
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 24
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x2b38ffff b=0x36729abc sw1=0xac180070
+        stall? 1
+Test 2 (match B): a=0x2b38ffff b=0x36729abc sw2=0xac120074
+        stall? 0
+Test 3 (SW zero): a=0x2b38ffff b=0x36729abc sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=12 j=11
++-------------------------------------------+
+  instruction A: 0x2b38ffff
+  instruction B: 0x02d7a82a
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 23
+  ID_EX.rd       = 21
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 24
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x2b38ffff b=0x02d7a82a sw1=0xac180070
+        stall? 1
+Test 2 (match B): a=0x2b38ffff b=0x02d7a82a sw2=0xac150074
+        stall? 0
+Test 3 (SW zero): a=0x2b38ffff b=0x02d7a82a sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=12 j=12
++-------------------------------------------+
+  instruction A: 0x2b38ffff
+  instruction B: 0x2b38ffff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 24
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 24
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x2b38ffff b=0x2b38ffff sw1=0xac180070
+        stall? 0
+Test 2 (match B): a=0x2b38ffff b=0x2b38ffff sw2=0xac180074
+        stall? 0
+Test 3 (SW zero): a=0x2b38ffff b=0x2b38ffff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=12 j=13
++-------------------------------------------+
+  instruction A: 0x2b38ffff
+  instruction B: 0x8c1a0068
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 26
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 24
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x2b38ffff b=0x8c1a0068 sw1=0xac180070
+        stall? 1
+Test 2 (match B): a=0x2b38ffff b=0x8c1a0068 sw2=0xac1a0074
+        stall? 0
+Test 3 (SW zero): a=0x2b38ffff b=0x8c1a0068 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=12 j=14
++-------------------------------------------+
+  instruction A: 0x2b38ffff
+  instruction B: 0xac1d006c
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 0
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 29
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 24
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x2b38ffff b=0xac1d006c sw1=0xac180070
+        stall? 1
+Test 2 (match B): a=0x2b38ffff b=0xac1d006c sw2=0xac1d0074
+        stall? 0
+Test 3 (SW zero): a=0x2b38ffff b=0xac1d006c sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=12 j=15
++-------------------------------------------+
+  instruction A: 0x2b38ffff
+  instruction B: 0x00000000
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 0
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 24
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x2b38ffff b=0x00000000 sw1=0xac180070
+        stall? 1
+Skipping Test 2 for this instruction combination, because B appears to "write" to register zero.
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=13 j=0
++-------------------------------------------+
+  instruction A: 0x8c1a0068
+  instruction B: 0x02328020
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 18
+  ID_EX.rd       = 16
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 26
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x8c1a0068 b=0x02328020 sw1=0xac1a0070
+        stall? 1
+Test 2 (match B): a=0x8c1a0068 b=0x02328020 sw2=0xac100074
+        stall? 0
+Test 3 (SW zero): a=0x8c1a0068 b=0x02328020 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=13 j=1
++-------------------------------------------+
+  instruction A: 0x8c1a0068
+  instruction B: 0x02959822
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 21
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 26
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x8c1a0068 b=0x02959822 sw1=0xac1a0070
+        stall? 1
+Test 2 (match B): a=0x8c1a0068 b=0x02959822 sw2=0xac130074
+        stall? 0
+Test 3 (SW zero): a=0x8c1a0068 b=0x02959822 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=13 j=2
++-------------------------------------------+
+  instruction A: 0x8c1a0068
+  instruction B: 0x216affff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 10
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 26
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x8c1a0068 b=0x216affff sw1=0xac1a0070
+        stall? 1
+Test 2 (match B): a=0x8c1a0068 b=0x216affff sw2=0xac0a0074
+        stall? 0
+Test 3 (SW zero): a=0x8c1a0068 b=0x216affff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=13 j=3
++-------------------------------------------+
+  instruction A: 0x8c1a0068
+  instruction B: 0x21ac0010
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 12
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 26
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x8c1a0068 b=0x21ac0010 sw1=0xac1a0070
+        stall? 1
+Test 2 (match B): a=0x8c1a0068 b=0x21ac0010 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x8c1a0068 b=0x21ac0010 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=13 j=4
++-------------------------------------------+
+  instruction A: 0x8c1a0068
+  instruction B: 0x00020821
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 2
+  ID_EX.rd       = 1
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 26
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x8c1a0068 b=0x00020821 sw1=0xac1a0070
+        stall? 1
+Test 2 (match B): a=0x8c1a0068 b=0x00020821 sw2=0xac010074
+        stall? 0
+Test 3 (SW zero): a=0x8c1a0068 b=0x00020821 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=13 j=5
++-------------------------------------------+
+  instruction A: 0x8c1a0068
+  instruction B: 0x00851823
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 5
+  ID_EX.rd       = 3
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 26
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x8c1a0068 b=0x00851823 sw1=0xac1a0070
+        stall? 1
+Test 2 (match B): a=0x8c1a0068 b=0x00851823 sw2=0xac030074
+        stall? 0
+Test 3 (SW zero): a=0x8c1a0068 b=0x00851823 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=13 j=6
++-------------------------------------------+
+  instruction A: 0x8c1a0068
+  instruction B: 0x24e61234
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 6
+  ID_EX.rd       = 2
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 26
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x8c1a0068 b=0x24e61234 sw1=0xac1a0070
+        stall? 1
+Test 2 (match B): a=0x8c1a0068 b=0x24e61234 sw2=0xac060074
+        stall? 0
+Test 3 (SW zero): a=0x8c1a0068 b=0x24e61234 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=13 j=7
++-------------------------------------------+
+  instruction A: 0x8c1a0068
+  instruction B: 0x014b4824
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 11
+  ID_EX.rd       = 9
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 26
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x8c1a0068 b=0x014b4824 sw1=0xac1a0070
+        stall? 1
+Test 2 (match B): a=0x8c1a0068 b=0x014b4824 sw2=0xac090074
+        stall? 0
+Test 3 (SW zero): a=0x8c1a0068 b=0x014b4824 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=13 j=8
++-------------------------------------------+
+  instruction A: 0x8c1a0068
+  instruction B: 0x01ae6025
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 14
+  ID_EX.rd       = 12
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 26
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x8c1a0068 b=0x01ae6025 sw1=0xac1a0070
+        stall? 1
+Test 2 (match B): a=0x8c1a0068 b=0x01ae6025 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0x8c1a0068 b=0x01ae6025 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=13 j=9
++-------------------------------------------+
+  instruction A: 0x8c1a0068
+  instruction B: 0x320f5678
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 15
+  ID_EX.rd       = 10
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 26
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x8c1a0068 b=0x320f5678 sw1=0xac1a0070
+        stall? 1
+Test 2 (match B): a=0x8c1a0068 b=0x320f5678 sw2=0xac0f0074
+        stall? 0
+Test 3 (SW zero): a=0x8c1a0068 b=0x320f5678 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=13 j=10
++-------------------------------------------+
+  instruction A: 0x8c1a0068
+  instruction B: 0x36729abc
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 18
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 26
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x8c1a0068 b=0x36729abc sw1=0xac1a0070
+        stall? 1
+Test 2 (match B): a=0x8c1a0068 b=0x36729abc sw2=0xac120074
+        stall? 0
+Test 3 (SW zero): a=0x8c1a0068 b=0x36729abc sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=13 j=11
++-------------------------------------------+
+  instruction A: 0x8c1a0068
+  instruction B: 0x02d7a82a
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 23
+  ID_EX.rd       = 21
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 26
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x8c1a0068 b=0x02d7a82a sw1=0xac1a0070
+        stall? 1
+Test 2 (match B): a=0x8c1a0068 b=0x02d7a82a sw2=0xac150074
+        stall? 0
+Test 3 (SW zero): a=0x8c1a0068 b=0x02d7a82a sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=13 j=12
++-------------------------------------------+
+  instruction A: 0x8c1a0068
+  instruction B: 0x2b38ffff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 24
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 26
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x8c1a0068 b=0x2b38ffff sw1=0xac1a0070
+        stall? 1
+Test 2 (match B): a=0x8c1a0068 b=0x2b38ffff sw2=0xac180074
+        stall? 0
+Test 3 (SW zero): a=0x8c1a0068 b=0x2b38ffff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=13 j=13
++-------------------------------------------+
+  instruction A: 0x8c1a0068
+  instruction B: 0x8c1a0068
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 26
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 26
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x8c1a0068 b=0x8c1a0068 sw1=0xac1a0070
+        stall? 0
+Test 2 (match B): a=0x8c1a0068 b=0x8c1a0068 sw2=0xac1a0074
+        stall? 0
+Test 3 (SW zero): a=0x8c1a0068 b=0x8c1a0068 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=13 j=14
++-------------------------------------------+
+  instruction A: 0x8c1a0068
+  instruction B: 0xac1d006c
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 0
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 29
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 26
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x8c1a0068 b=0xac1d006c sw1=0xac1a0070
+        stall? 1
+Test 2 (match B): a=0x8c1a0068 b=0xac1d006c sw2=0xac1d0074
+        stall? 0
+Test 3 (SW zero): a=0x8c1a0068 b=0xac1d006c sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=13 j=15
++-------------------------------------------+
+  instruction A: 0x8c1a0068
+  instruction B: 0x00000000
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 0
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 26
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0x8c1a0068 b=0x00000000 sw1=0xac1a0070
+        stall? 1
+Skipping Test 2 for this instruction combination, because B appears to "write" to register zero.
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=14 j=0
++-------------------------------------------+
+  instruction A: 0xac1d006c
+  instruction B: 0x02328020
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 18
+  ID_EX.rd       = 16
+  --
+  EX_MEM.regWrite = 0
+  EX_MEM.writeReg = 29
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0xac1d006c b=0x02328020 sw1=0xac1d0070
+        stall? 0
+Test 2 (match B): a=0xac1d006c b=0x02328020 sw2=0xac100074
+        stall? 0
+Test 3 (SW zero): a=0xac1d006c b=0x02328020 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=14 j=1
++-------------------------------------------+
+  instruction A: 0xac1d006c
+  instruction B: 0x02959822
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 21
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 0
+  EX_MEM.writeReg = 29
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0xac1d006c b=0x02959822 sw1=0xac1d0070
+        stall? 0
+Test 2 (match B): a=0xac1d006c b=0x02959822 sw2=0xac130074
+        stall? 0
+Test 3 (SW zero): a=0xac1d006c b=0x02959822 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=14 j=2
++-------------------------------------------+
+  instruction A: 0xac1d006c
+  instruction B: 0x216affff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 10
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 0
+  EX_MEM.writeReg = 29
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0xac1d006c b=0x216affff sw1=0xac1d0070
+        stall? 0
+Test 2 (match B): a=0xac1d006c b=0x216affff sw2=0xac0a0074
+        stall? 0
+Test 3 (SW zero): a=0xac1d006c b=0x216affff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=14 j=3
++-------------------------------------------+
+  instruction A: 0xac1d006c
+  instruction B: 0x21ac0010
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 12
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 0
+  EX_MEM.writeReg = 29
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0xac1d006c b=0x21ac0010 sw1=0xac1d0070
+        stall? 0
+Test 2 (match B): a=0xac1d006c b=0x21ac0010 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0xac1d006c b=0x21ac0010 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=14 j=4
++-------------------------------------------+
+  instruction A: 0xac1d006c
+  instruction B: 0x00020821
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 2
+  ID_EX.rd       = 1
+  --
+  EX_MEM.regWrite = 0
+  EX_MEM.writeReg = 29
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0xac1d006c b=0x00020821 sw1=0xac1d0070
+        stall? 0
+Test 2 (match B): a=0xac1d006c b=0x00020821 sw2=0xac010074
+        stall? 0
+Test 3 (SW zero): a=0xac1d006c b=0x00020821 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=14 j=5
++-------------------------------------------+
+  instruction A: 0xac1d006c
+  instruction B: 0x00851823
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 5
+  ID_EX.rd       = 3
+  --
+  EX_MEM.regWrite = 0
+  EX_MEM.writeReg = 29
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0xac1d006c b=0x00851823 sw1=0xac1d0070
+        stall? 0
+Test 2 (match B): a=0xac1d006c b=0x00851823 sw2=0xac030074
+        stall? 0
+Test 3 (SW zero): a=0xac1d006c b=0x00851823 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=14 j=6
++-------------------------------------------+
+  instruction A: 0xac1d006c
+  instruction B: 0x24e61234
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 6
+  ID_EX.rd       = 2
+  --
+  EX_MEM.regWrite = 0
+  EX_MEM.writeReg = 29
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0xac1d006c b=0x24e61234 sw1=0xac1d0070
+        stall? 0
+Test 2 (match B): a=0xac1d006c b=0x24e61234 sw2=0xac060074
+        stall? 0
+Test 3 (SW zero): a=0xac1d006c b=0x24e61234 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=14 j=7
++-------------------------------------------+
+  instruction A: 0xac1d006c
+  instruction B: 0x014b4824
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 11
+  ID_EX.rd       = 9
+  --
+  EX_MEM.regWrite = 0
+  EX_MEM.writeReg = 29
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0xac1d006c b=0x014b4824 sw1=0xac1d0070
+        stall? 0
+Test 2 (match B): a=0xac1d006c b=0x014b4824 sw2=0xac090074
+        stall? 0
+Test 3 (SW zero): a=0xac1d006c b=0x014b4824 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=14 j=8
++-------------------------------------------+
+  instruction A: 0xac1d006c
+  instruction B: 0x01ae6025
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 14
+  ID_EX.rd       = 12
+  --
+  EX_MEM.regWrite = 0
+  EX_MEM.writeReg = 29
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0xac1d006c b=0x01ae6025 sw1=0xac1d0070
+        stall? 0
+Test 2 (match B): a=0xac1d006c b=0x01ae6025 sw2=0xac0c0074
+        stall? 0
+Test 3 (SW zero): a=0xac1d006c b=0x01ae6025 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=14 j=9
++-------------------------------------------+
+  instruction A: 0xac1d006c
+  instruction B: 0x320f5678
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 15
+  ID_EX.rd       = 10
+  --
+  EX_MEM.regWrite = 0
+  EX_MEM.writeReg = 29
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0xac1d006c b=0x320f5678 sw1=0xac1d0070
+        stall? 0
+Test 2 (match B): a=0xac1d006c b=0x320f5678 sw2=0xac0f0074
+        stall? 0
+Test 3 (SW zero): a=0xac1d006c b=0x320f5678 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=14 j=10
++-------------------------------------------+
+  instruction A: 0xac1d006c
+  instruction B: 0x36729abc
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 18
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 0
+  EX_MEM.writeReg = 29
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0xac1d006c b=0x36729abc sw1=0xac1d0070
+        stall? 0
+Test 2 (match B): a=0xac1d006c b=0x36729abc sw2=0xac120074
+        stall? 0
+Test 3 (SW zero): a=0xac1d006c b=0x36729abc sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=14 j=11
++-------------------------------------------+
+  instruction A: 0xac1d006c
+  instruction B: 0x02d7a82a
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 23
+  ID_EX.rd       = 21
+  --
+  EX_MEM.regWrite = 0
+  EX_MEM.writeReg = 29
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0xac1d006c b=0x02d7a82a sw1=0xac1d0070
+        stall? 0
+Test 2 (match B): a=0xac1d006c b=0x02d7a82a sw2=0xac150074
+        stall? 0
+Test 3 (SW zero): a=0xac1d006c b=0x02d7a82a sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=14 j=12
++-------------------------------------------+
+  instruction A: 0xac1d006c
+  instruction B: 0x2b38ffff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 24
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 0
+  EX_MEM.writeReg = 29
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0xac1d006c b=0x2b38ffff sw1=0xac1d0070
+        stall? 0
+Test 2 (match B): a=0xac1d006c b=0x2b38ffff sw2=0xac180074
+        stall? 0
+Test 3 (SW zero): a=0xac1d006c b=0x2b38ffff sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=14 j=13
++-------------------------------------------+
+  instruction A: 0xac1d006c
+  instruction B: 0x8c1a0068
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 26
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 0
+  EX_MEM.writeReg = 29
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0xac1d006c b=0x8c1a0068 sw1=0xac1d0070
+        stall? 0
+Test 2 (match B): a=0xac1d006c b=0x8c1a0068 sw2=0xac1a0074
+        stall? 0
+Test 3 (SW zero): a=0xac1d006c b=0x8c1a0068 sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=14 j=14
++-------------------------------------------+
+  instruction A: 0xac1d006c
+  instruction B: 0xac1d006c
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 0
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 29
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 0
+  EX_MEM.writeReg = 29
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0xac1d006c b=0xac1d006c sw1=0xac1d0070
+        stall? 0
+Test 2 (match B): a=0xac1d006c b=0xac1d006c sw2=0xac1d0074
+        stall? 0
+Test 3 (SW zero): a=0xac1d006c b=0xac1d006c sw3=0xac000078
+        stall? 0
+
++-------------------------------------------+
+| STARTING TEST i=14 j=15
++-------------------------------------------+
+  instruction A: 0xac1d006c
+  instruction B: 0x00000000
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 0
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 0
+  EX_MEM.writeReg = 29
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Test 1 (match A): a=0xac1d006c b=0x00000000 sw1=0xac1d0070
+        stall? 0
+Skipping Test 2 for this instruction combination, because B appears to "write" to register zero.
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=15 j=0
++-------------------------------------------+
+  instruction A: 0x00000000
+  instruction B: 0x02328020
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 18
+  ID_EX.rd       = 16
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 0
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Skipping Test 1 for this instruction combination, because A appears to "write" to register zero.
+Test 2 (match B): a=0x00000000 b=0x02328020 sw2=0xac100074
+        stall? 0
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=15 j=1
++-------------------------------------------+
+  instruction A: 0x00000000
+  instruction B: 0x02959822
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 21
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 0
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Skipping Test 1 for this instruction combination, because A appears to "write" to register zero.
+Test 2 (match B): a=0x00000000 b=0x02959822 sw2=0xac130074
+        stall? 0
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=15 j=2
++-------------------------------------------+
+  instruction A: 0x00000000
+  instruction B: 0x216affff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 10
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 0
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Skipping Test 1 for this instruction combination, because A appears to "write" to register zero.
+Test 2 (match B): a=0x00000000 b=0x216affff sw2=0xac0a0074
+        stall? 0
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=15 j=3
++-------------------------------------------+
+  instruction A: 0x00000000
+  instruction B: 0x21ac0010
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 12
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 0
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Skipping Test 1 for this instruction combination, because A appears to "write" to register zero.
+Test 2 (match B): a=0x00000000 b=0x21ac0010 sw2=0xac0c0074
+        stall? 0
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=15 j=4
++-------------------------------------------+
+  instruction A: 0x00000000
+  instruction B: 0x00020821
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 2
+  ID_EX.rd       = 1
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 0
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Skipping Test 1 for this instruction combination, because A appears to "write" to register zero.
+Test 2 (match B): a=0x00000000 b=0x00020821 sw2=0xac010074
+        stall? 0
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=15 j=5
++-------------------------------------------+
+  instruction A: 0x00000000
+  instruction B: 0x00851823
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 5
+  ID_EX.rd       = 3
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 0
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Skipping Test 1 for this instruction combination, because A appears to "write" to register zero.
+Test 2 (match B): a=0x00000000 b=0x00851823 sw2=0xac030074
+        stall? 0
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=15 j=6
++-------------------------------------------+
+  instruction A: 0x00000000
+  instruction B: 0x24e61234
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 6
+  ID_EX.rd       = 2
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 0
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Skipping Test 1 for this instruction combination, because A appears to "write" to register zero.
+Test 2 (match B): a=0x00000000 b=0x24e61234 sw2=0xac060074
+        stall? 0
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=15 j=7
++-------------------------------------------+
+  instruction A: 0x00000000
+  instruction B: 0x014b4824
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 11
+  ID_EX.rd       = 9
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 0
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Skipping Test 1 for this instruction combination, because A appears to "write" to register zero.
+Test 2 (match B): a=0x00000000 b=0x014b4824 sw2=0xac090074
+        stall? 0
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=15 j=8
++-------------------------------------------+
+  instruction A: 0x00000000
+  instruction B: 0x01ae6025
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 14
+  ID_EX.rd       = 12
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 0
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Skipping Test 1 for this instruction combination, because A appears to "write" to register zero.
+Test 2 (match B): a=0x00000000 b=0x01ae6025 sw2=0xac0c0074
+        stall? 0
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=15 j=9
++-------------------------------------------+
+  instruction A: 0x00000000
+  instruction B: 0x320f5678
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 15
+  ID_EX.rd       = 10
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 0
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Skipping Test 1 for this instruction combination, because A appears to "write" to register zero.
+Test 2 (match B): a=0x00000000 b=0x320f5678 sw2=0xac0f0074
+        stall? 0
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=15 j=10
++-------------------------------------------+
+  instruction A: 0x00000000
+  instruction B: 0x36729abc
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 18
+  ID_EX.rd       = 19
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 0
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Skipping Test 1 for this instruction combination, because A appears to "write" to register zero.
+Test 2 (match B): a=0x00000000 b=0x36729abc sw2=0xac120074
+        stall? 0
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=15 j=11
++-------------------------------------------+
+  instruction A: 0x00000000
+  instruction B: 0x02d7a82a
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 23
+  ID_EX.rd       = 21
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 0
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Skipping Test 1 for this instruction combination, because A appears to "write" to register zero.
+Test 2 (match B): a=0x00000000 b=0x02d7a82a sw2=0xac150074
+        stall? 0
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=15 j=12
++-------------------------------------------+
+  instruction A: 0x00000000
+  instruction B: 0x2b38ffff
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 24
+  ID_EX.rd       = 31
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 0
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Skipping Test 1 for this instruction combination, because A appears to "write" to register zero.
+Test 2 (match B): a=0x00000000 b=0x2b38ffff sw2=0xac180074
+        stall? 0
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=15 j=13
++-------------------------------------------+
+  instruction A: 0x00000000
+  instruction B: 0x8c1a0068
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 26
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 0
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Skipping Test 1 for this instruction combination, because A appears to "write" to register zero.
+Test 2 (match B): a=0x00000000 b=0x8c1a0068 sw2=0xac1a0074
+        stall? 0
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=15 j=14
++-------------------------------------------+
+  instruction A: 0x00000000
+  instruction B: 0xac1d006c
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 0
+  ID_EX.regDst   = 0
+  ID_EX.rt       = 29
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 0
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Skipping Test 1 for this instruction combination, because A appears to "write" to register zero.
+Test 2 (match B): a=0x00000000 b=0xac1d006c sw2=0xac1d0074
+        stall? 0
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+
++-------------------------------------------+
+| STARTING TEST i=15 j=15
++-------------------------------------------+
+  instruction A: 0x00000000
+  instruction B: 0x00000000
+
+Key pipeline registers when A is in the EX/MEM register, and B is in ID/EX:
+  ID_EX.regWrite = 1
+  ID_EX.regDst   = 1
+  ID_EX.rt       = 0
+  ID_EX.rd       = 0
+  --
+  EX_MEM.regWrite = 1
+  EX_MEM.writeReg = 0
+
+The testcase will perform 3 stall checks with those two instructions: match-A, match-B, and a SW-stores-zero-register test.
+
+Skipping Test 1 for this instruction combination, because A appears to "write" to register zero.
+Skipping Test 2 for this instruction combination, because B appears to "write" to register zero.
+Skipping Test 3 for this instruction combination, because either A or B appear to "write" to register zero.
+

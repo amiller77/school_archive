@@ -1,0 +1,76 @@
+/*
+* File: angryZombies.css
+* Author: Alexander Miller
+* Class: CSC337
+* Date: 11/29
+* Assignment: Final Projects
+* Description: CSS for browser game, angryZombies
+*/
+
+body {
+  background-color: rgb(220,220,220);
+  text-align: center;
+}
+
+canvas {
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-family: fantasy, serif;
+  color: red;
+  letter-spacing: 5px;
+}
+
+h1, #pauseStatus {
+  color: red;
+}
+
+img {
+  height: 18px;
+  width: 18px;
+}
+
+#leftHub {
+  justify-content: flex-end;
+  margin-right: 15px;
+}
+
+#leftHub, #levelProgression {
+  display: flex;
+  flex-direction: column;
+}
+
+#leftHub, #levelProgression, #mainFeature {
+  display: flex;
+}
+
+#levelCanvas, #pointsCanvas {
+  margin-bottom: 25px;
+}
+
+#mainFeature {
+  flex-direction: row;
+  justify-content: center;
+}
+
+p {
+  font-family: cursive, serif;
+}
+
+#pauseStatus {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+#pauseButton, #playButton {
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.progressionButton {
+  margin: 10px;
+}

@@ -1,0 +1,6 @@
+
+export ORACLE_HOME=/opt/oracle/product/10.2.0/client/jdbc/lib/ojdbc14.jar
+
+export CLASSPATH=.:${CLASSPATH}:${ORACLE_HOME}
+
+

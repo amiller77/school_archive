@@ -1,0 +1,35 @@
+# filename: battleship-tests.txt
+# name: Alexander Miller
+# description: black box tests for battleship.py
+
+# Test 1 (error)
+# Aspect: Tests ability to handle a nonexistent file
+# nonexistent_file.txt
+# End of Test
+
+# Test 2 (error)
+# Aspect: Tests ability to handle guess file with guesses that are off the grid
+# normal_placement_file.txt
+# guess_file_with_wacky_coordinates.py
+# End of Test
+
+# Test 3 (normal)
+# Aspect: Tests ability to handle files with quality guesses and good placement data
+# normal_placement_file.txt
+# reasonable_guess_file.txt
+# End of Test
+
+# Test 4 (normal)
+# Aspect: Tests ability of program to handle guess file where none 
+# of the guesses are hits
+# normal_placement_file.txt
+# all_of_the_guesses_are_misses.txt
+# End of Test
+
+# Test 5 (error)
+# Aspect: Tests if program can handle empty files (defined as error in specs)
+# empty_placement_file.txt
+# guess_file.txt
+# End of Test
+
+

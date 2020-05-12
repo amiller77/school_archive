@@ -1,0 +1,225 @@
+#!/usr/bin/env bash
+
+#
+# File: testCode
+# Author: Alexander Miller
+# Description: bash script to automate test cases
+# Program Arguments:
+#   Option 1: testCode programName testCaseDirectory
+#   Option 2: testCode
+#       <stdin> programName
+#       <stdin> testCaseDirectory
+#   If not enough args, print error, exit status 1
+#   Don't worry about too many args
+# Files:
+#   Relevant files in testCaseDirectory named test_programName*
+#   Example executable should also be in test directory and called ex_programName
+#   Program being tested should be located in current directory, not test directory
+# Testing:
+#   Need to time out program being tested to avoid infinite loops
+#   Redirect tested program input to be test cases
+#   Check for Time out termination, abnormal execution,
+#       results of stdout stderr and return codes
+#   Check for memory errors and leaks in valgrind
+#   Stdout:
+#       passes if stdout matches [use -Z flag for diff]
+#   Return Code:
+#       passes if codes match
+#   Stderr:
+#       passes if both wrote to stderr or neither did
+#   Valgrind:
+#       passes if valgrind reports no memory errors
+#   Memory Free:
+#       passes if valgrind reports all memory freed on exit
+# Error Handling:
+#   Fatal script errors reported to std error, exit with non-zero status
+#   Errors in the tested program reported to stdout
+#   Script returns 0 if testing was successful, even if tested program flawed
+# Fatal Errors:
+#   Failure to read program name and test directory
+#   Test directory doesn't exist
+#   Cannot execute reference executable
+#   Cannot execute tested program
+# Standard output:
+#       Note that test_xxx_01 is name of file without any "/"
+#   Timeout:    *** testcase: test_xxx_01 [ FAILED - Timed out ]
+#   Crash:      *** testcase: test_xxx_01 [ FAILED - Abnormal termination ]
+#   Normal:
+#               *** testcase: test_xxx_01 [ stdout - PASSED ]
+#               *** testcase: test_xxx_01 [ return code - PASSED ]
+#               *** testcase: test_xxx_01 [ stderr - FAILED ]
+#               *** testcase: test_xxx_01 [ valgrind - FAILED ]
+#               *** testcase: test_xxx_01 [ memory free - PASSED ]
+#
+
+set -u
+
+# GATHER PROGRAM ARGUMENTS
+# VARIABLES:
+#   progName
+#   testDir
+#   exProg
+# if numargs == 1 -> error
+if test $# -eq 1
+then
+    echo "Error: provide 0 or 2 program parameters." 1>&2
+    exit 1
+# if numargs >= 2:
+elif test $# -ge 2
+then
+    # progName = arg1 ; testDir = arg2
+    progName=$1
+    testDir=$2
+# else (if numargs 0)
+else
+    # try to read arg1, arg2 from std. in
+    read progName; readResult1=$?
+    read testDir; readResult2=$?
+    # if either reads failed, fatal error
+    if test $readResult1 -ne 0 -o $readResult2 -ne 0
+    then
+        echo "Error: Script requires program name and test directory to be provided" 1>&2
+        exit 1
+    fi
+fi
+
+# validate arguments:
+# program exists and is regular file:
+test -f $progName; progExists=$?
+# ... and is executable:
+test -x $progName; progExec=$?
+# directory exists as directory:
+test -d $testDir; dirExists=$?
+# ... and is searchable:
+test -x $testDir; dirExec=$?
+if test $progExists -ne 0 -o $progExec -ne 0 -o $dirExists -ne 0 -o $dirExec -ne 0
+then
+    echo "Error: program must exist as executable file. Directory must be searchable." 1>&2
+    exit 1
+fi
+# check that example executable exists, is regular file, is executable
+exProg="ex_$progName"
+cd $testDir
+test -f $exProg; exProgExists=$?
+test -x $exProg; exProgExec=$?
+cd "./.."
+if test $exProgExists -ne 0 -o $exProgExec -ne 0
+then
+    echo "Error: example executable must exist as executable file named ex_programName in test directory." 1>&2
+    exit 1
+fi
+
+# TESTING LOOP
+# set executable to full path name
+exProg="$testDir/$exProg"
+# get all files in directory stored to a variable
+testCases=$(ls $testDir)
+# string to identify testcases:
+compStr="test_$progName"
+compStrLen=$(echo -n $compStr | wc -c)
+
+# iterate over files in directory
+for file in $testCases
+do
+    # only operate on valid test cases
+    fileNameLen=$(echo -n $file | wc -c)
+    # if filename shorter than the prefix, skip it
+    if test $fileNameLen -lt $compStrLen
+    then
+        continue
+    fi
+    # now ensure prefix is comparison string
+    fileNamePrefix=${file:0:$compStrLen}
+    if test $fileNamePrefix != $compStr
+    then
+        continue
+    fi
+    # invariant: only operating on valid test cases at this point
+    fullFilePath="$testDir/$file"
+
+    # run the program under timeout
+    {
+        timeout 2s $progName <$fullFilePath 1>progOut 2>progErr
+    } &> /dev/null
+    testResult=$?
+    # check for timeout
+    if test $testResult -eq 124
+    then
+        echo "*** testcase: $file [ FAILED - Timed out ]"
+        continue
+    fi
+    # check for abnormal termination
+    if test $testResult -gt 128
+    then
+        echo "*** testcase: $file [ FAILED - Abnormal termination ]"
+        continue
+    fi
+
+    # run example executable
+    $exProg <$fullFilePath 1>exOut 2>exErr
+    exResult=$?
+
+    # compare stdouts
+    diff -Z progOut exOut >diffStd
+    diffStdCount=$(cat diffStd | wc -c)
+    # if difference is nonempty, failed stdout, else good
+    if test $diffStdCount -gt 0
+    then
+        echo "*** testcase: $file [ stdout - FAILED ]"
+    else
+        echo "*** testcase: $file [ stdout - PASSED ]"
+    fi
+
+    # compare return codes
+    # if equal pass, else fail
+    if test $testResult -eq $exResult
+    then
+        echo "*** testcase: $file [ return code - PASSED ]"
+    else
+        echo "*** testcase: $file [ return code - FAILED ]"
+    fi
+
+    # compare stderrs
+    progErrCount=$(cat progErr | wc -c)
+    exErrCount=$(cat exErr | wc -c)
+    # if both nonzero, ok
+    if test $progErrCount -gt 0 -a $exErrCount -gt 0
+    then
+        echo "*** testcase: $file [ stderr - PASSED ]"
+    # if both zero, ok
+    elif test $progErrCount -eq 0 -a $exErrCount -eq 0
+    then
+        echo "*** testcase: $file [ stderr - PASSED ]"
+    else
+        echo "*** testcase: $file [ stderr - FAILED ]"
+    fi
+
+    # check for memory errors
+    # for some reason valgrind prints its output to stndout
+    valgrind $progName <$fullFilePath 1>/dev/null 2> grindOut
+    # see if the no error message was in our valgrind output
+    #echo "grep $noErrorsMsg grindOut"
+    grep "ERROR SUMMARY: 0 errors" grindOut &> /dev/null
+    noMemErrors=$?
+    # if noMemErrors == 0, then the msg was found
+    if test $noMemErrors -eq 0
+    then
+        echo "*** testcase: $file [ valgrind - PASSED ]"
+    else
+        echo "*** testcase: $file [ valgrind - FAILED ]"
+    fi
+
+    # check for freed memory
+    grep "All heap blocks were freed -- no leaks are possible" grindOut &> /dev/null
+    noMemLoss=$?
+    if test $noMemLoss -eq 0
+    then
+        echo "*** testcase: $file [ memory free - PASSED ]"
+    else
+        echo "*** testcase: $file [ memory free - FAILED ]"
+    fi
+
+done
+
+exit 0
+#

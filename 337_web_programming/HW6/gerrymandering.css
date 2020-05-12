@@ -1,0 +1,21 @@
+.dem, .gop {
+	height: 30px;
+	margin-bottom: 5px;
+}
+
+.dem {
+	background-color: blue;
+}
+
+.gop {
+	background-color: red;
+}
+
+body {
+	width: 80%;
+	margin: auto;
+}
+
+#searchdiv, h1 {
+	text-align: center;
+}

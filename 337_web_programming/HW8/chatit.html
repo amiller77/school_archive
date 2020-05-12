@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<!--
+Document: chatit.html
+Author: Alexander Miller
+Description: HTML for chat service
+Course: CSC 337
+Date: 10/31
+-->
+
+<html>
+  <head>
+    <title>Chat-It</title>
+    <link href="chatit.css" type="text/css" rel="stylesheet" />
+    <script src="chatit.js" type="text/javascript"></script>
+  </head>
+
+  <body id="body">
+    <div id="headers">
+      <h1> CHAT-IT </h1>
+      <h3> Nothing but mindless chatter, all the time, right here, on CHAT-IT. </h3>
+    </div>
+
+    <div id="contents">
+      <div class="spacer"></div>
+      <div id="inputZone">
+        <label>Name: <input type="text" id="nameInput" /></label>
+        <label>Comment: <textarea rows="6" cols="80" id="commentInput"></textarea></label>
+        <button id="submitButton">Send</button>
+        <div id="messageReceived"></div>
+      </div>
+      <div class="spacer"></div>
+    </div>
+
+    <div id="chatFeed"></div>
+
+  </body>
+</html>

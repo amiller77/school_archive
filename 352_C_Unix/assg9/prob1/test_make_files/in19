@@ -1,0 +1,10 @@
+target: a b c
+
+a:
+	touch a
+
+b:
+	touch b
+
+c:
+	touch c

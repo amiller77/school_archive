@@ -1,0 +1,178 @@
+abcdef01
+00
+06
+01
+00
+42
+69
+6c
+6c
+83
+01
+00
+00
+0002fdf6
+
+00000183
+f6
+fd
+02
+00
+42
+6c
+69
+6e
+8a
+03
+00
+00
+0000090a
+
+0000038a
+0a
+09
+00
+00
+50
+69
+6e
+6b
+fb
+02
+00
+00
+0002f709
+
+000002fb
+09
+f7
+02
+00
+49
+6e
+6b
+79
+7f
+01
+00
+00
+00000af7
+
+0000017f
+f7
+0a
+00
+00
+43
+6c
+79
+64
+2f
+02
+00
+00
+00030501
+
+0000022f
+01
+05
+03
+00
+42
+6f
+6e
+6e
+a9
+02
+00
+00
+000303fb
+
+000002a9
+fb
+03
+03
+00
+50
+72
+69
+6e
+90
+00
+00
+00
+00030202
+
+00000090
+02
+02
+03
+00
+43
+68
+61
+72
+7b
+00
+00
+00
+c0d4f00d
+
+Turtle "Blinky"
+  pos -10,-3
+  dir South
+  odometer 906
+
+Turtle "Clyde"
+  pos -9,10
+  dir North
+  odometer 559
+
+Turtle "Prince"
+  pos -5,3
+  dir West
+  odometer 144
+
+Turtle "Billy"
+  pos 0,6
+  dir East
+  odometer 387
+
+Turtle "Bonnie"
+  pos 1,5
+  dir West
+  odometer 681
+
+Turtle "Charlie"
+  pos 2,2
+  dir West
+  odometer 123
+
+Turtle "Inky"
+  pos 9,-9
+  dir South
+  odometer 383
+
+Turtle "Pinky"
+  pos 10,9
+  dir North
+  odometer 763
+
+
++-----------------------------------------------------------+
+|    Magic Value (popped from the stack):                   |
++-----------------------------------------------------------+
+a302f09a
+
++-----------------------------------------------------------+
+|    Testcase Register Dump (fp, then 8 sX regs):           |
++-----------------------------------------------------------+
+df42983b
+826e8575
+37f7f81d
+3c2a5954
+8da6ceac
+00e7531d
+a14c17ee
+7e3f3457
+09c67fb6

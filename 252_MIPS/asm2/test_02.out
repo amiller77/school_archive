@@ -1,0 +1,56 @@
+Fibonacci Numbers:
+  0: 1
+  1: 1
+  2: 2
+  3: 3
+  4: 5
+  5: 8
+  6: 13
+  7: 21
+  8: 34
+  9: 55
+  10: 89
+  11: 144
+  12: 233
+
++------+
+|......|
+|......|
+|......|
+|......|
+|......|
+|......|
++------+
+
+Run Check: ASCENDING
+
+4
+
+String successfully swapped!
+
+--- Dumping out all of the variables, after the student code ran:
+fib:          12
+square:       10
+square_size:  8
+square_fill:  46
+runCheck:     1
+countWords:   1
+str:          " si  siht gnirts   A"
+intArray_len: 16
+  4
+  6
+  22
+  30
+  39
+  55
+  58
+  59
+  60
+  70
+  80
+  90
+  100
+  300
+  400
+  500
+--- Testcase end---

@@ -1,0 +1,8 @@
+README
+
+DESCRIPTION
+- small graphical-user interface based game of connect 4 in java
+
+TECHNOLOGIES
+Java Version 8
+Required Library: JavaFX

@@ -1,0 +1,2 @@
+* review consecutive line breaks rule
+* write index

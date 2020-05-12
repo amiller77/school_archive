@@ -1,0 +1,29 @@
+# filename: fake-news-tests.txt
+# name: Alexander Miller
+# description: blackbox tests for fake-news.py
+
+# Test 1 (Error)
+# Tests if Program can handle nonexistent file
+# nonexistant_file.txt
+# End of Test
+
+# Test 2 (Edge)
+# Tests if Program can handle empty file
+# empty_file.txt
+# End of Test
+
+# Test 3 (Error)
+# Tests if Program can handle string arguments for N
+# N = ‘abc’
+# End of Test
+
+Test 4 (Normal)
+# Tests how Program handles titles with terminal punctuation characters on words
+# (title) What the F%*#! A History of Comic Expletives 
+# End of Test
+
+Test 5 (Normal)
+# Tests how program handles titles with punctuation within a word in the title
+# (title) Ca$h for Cl#ms: A St&ry abo^t Ma%ne’s Se@food Ind#stry
+# End of Test
+

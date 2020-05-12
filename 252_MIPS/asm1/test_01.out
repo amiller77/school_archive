@@ -1,0 +1,20 @@
+Comparisons: 0 1 1
+median: 123
+
+'two' was negative
+
+sum: 1368
+
+one: 789
+two: 123
+three: 456
+
+Dumping out all of the variables, after the student code ran:
+1
+1
+1
+1
+1
+789
+123
+456

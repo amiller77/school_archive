@@ -1,0 +1,30 @@
+# filename: dates-tests.txt
+# name: Alexander Miller
+# description: blackbox tests for dates.py
+
+# Test 1 (Error)
+# Tests if Program can handle nonexistent file
+# nonexistant_file.txt
+# End of Test
+
+# Test 2 (Normal)
+# Tests if Program can handle lines with no events
+# (Line in file:) I 09/13/1994
+# End of Test
+
+# Test 3 (Error)
+# Tests if Program can handle line with lowercase operation indicator
+# (improperly formatted file)
+# (Line in file:) r 09/13/1994 : event
+# End of Test
+
+# Test 4 (Edge)
+# Tests if Program can handle empty file
+# empty_file.txt
+# End of Test
+
+# Test 5 (Normal)
+# Tests if Program can handle lines with events
+# (Line in file:) I 09/19/1994 : event
+# End of Test
+

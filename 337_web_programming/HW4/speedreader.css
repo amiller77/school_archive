@@ -1,0 +1,89 @@
+/*
+* Author: Alexander Miller
+* File: speedreader.css
+* Description: CSS file for speedreader
+*/
+
+body {
+  background-color: #EAF6F6;
+  font-family: Garamond, serif;
+  font-size: 12pt;
+}
+
+button {
+  background-color: white;
+}
+
+button, img {
+  width: 70px;
+}
+
+button, textarea {
+  border: 1px solid gray;
+}
+
+#display {
+  border: 2px solid #8EBEBE;
+  border-radius: 5px;
+  height: 100px;
+  font-family: monospace;
+  font-size: 36pt;
+  line-height: 100px;
+  text-align: center;
+}
+
+#display, legend {
+  font-weight: bold;
+}
+
+#display, textarea {
+  background-color: #FFFFFF;
+}
+
+#display, #fieldsetDiv, #textAreaFieldSet, #title {
+  width: 80%;
+}
+
+#display, fieldset, #fieldsetDiv, #title {
+  margin: auto;
+}
+
+#externalLinks {
+  bottom: 5px;
+  margin-left: 0px;
+  position: absolute;
+}
+
+#externalLinks, #fieldsetDiv, #title {
+  display: flex;
+}
+
+#externalLinks, #fieldsetDiv {
+  flex-direction: row;
+}
+
+fieldset {
+  border: none;
+  padding: 2px; /*to pad the legends */
+}
+
+#fieldsetDiv {
+  vertical-align: top;
+}
+
+legend {
+  border-bottom: 1px solid #8EBEBE;
+}
+
+legend, textarea {
+  width: 100%;
+}
+
+textarea {
+  height: 100%;
+  margin: 0px;
+}
+
+#title {
+  justify-content: center;
+}

@@ -1,0 +1,36 @@
+# filename: rhymes-oo-tests.txt
+# name: Alexander Miller
+# description: black box tests for rhymes-oo.py
+
+# Test 1 (error)
+# Aspect: tests programs ability to handle dictionary file that cannot be read
+# unreadable_dictionary_file.txt
+# End of Test
+
+# Test 2 (error)
+# Aspect: tests programs ability to handle word not in dictionary
+# selected a german word for this example but really many would work
+# working_dictionary.txt
+vergnuegen
+# End of Test
+
+# Test 3 (normal)
+# Aspect: tests programs ability to handle normal word and dictionary
+# assuming ‘record’ is in the dictionary for the purposes of this example
+# working_dictionary.txt
+record
+# End of Test
+
+# Test 4 (normal)
+# Aspect: tests programs ability to handle a mono-syllabic word
+# therefore only syllable will be primary stress syllable
+# assuming ‘cat’ is in dictionary for this example
+# working_dictionary.txt
+cat
+# End of Test
+
+# Test 5 (edge)
+# Aspect: tests programs ability to handle an empty file
+# empty_file.txt
+word
+# End of Test

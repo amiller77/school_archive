@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<!--
+Author: Alexander Miller
+Assignment: Homework 3
+Description: this is the HTML file for a website with various buttons
+which allow the user to guess a number between certain user-provided
+parameters.
+-->
+
+<html>
+  <head>
+    <title> Guess a Number Game </title>
+    <link href="guessingGame.css" type="text/css" rel="stylesheet" />
+    <script src="guessingGame.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <h1> Guess a Number Game </h1>
+    <div id="topRow">
+      <p id="topLeft">
+        Enter a minimum and maximum value for the number for the computer
+        to generate.
+      </p>
+      <div id="topRight">
+        <label>Minimum:<input type="text" id="minimum" /></label>
+        <label>Maximum:<input type="text" id="maximum" /></label>
+        <button id="startButton">start</button>
+      </div>
+    </div>
+    <div id="bottomRow">
+      <div class="bottomElement">
+        <label>Your guess:<input type=text id="guess" /></label>
+        <button id="guessButton">guess!</button>
+      </div>
+      <div class="bottomElement" id="bottomRight">
+        <h2> Your previous guesses </h2>
+        <p id="output"></p>
+      </div>
+    </div>
+  </body>
+</html>

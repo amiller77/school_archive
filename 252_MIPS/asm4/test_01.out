@@ -1,0 +1,425 @@
+abcdef01
+00
+00
+00
+00
+42
+69
+6c
+6c
+00
+00
+00
+00
+23456789
+
+deadbeef
+00
+00
+00
+00
+42
+6c
+69
+6e
+00
+00
+00
+00
+c0d4f00d
+
+Turtle "Billy"
+  pos 0,0
+  dir North
+  odometer 0
+
+Turtle "Blinky"
+  pos 0,0
+  dir North
+  odometer 0
+
+turtle_turnLeft
+Turtle "Billy"
+  pos 0,0
+  dir West
+  odometer 0
+
+turtle_turnRight
+Turtle "Blinky"
+  pos 0,0
+  dir East
+  odometer 0
+
+turtle_move 1
+turtle_move 1
+turtle_move 1
+turtle_move 1
+Turtle "Billy"
+  pos -4,0
+  dir West
+  odometer 4
+
+turtle_move -10
+Turtle "Billy"
+  pos 6,0
+  dir West
+  odometer 14
+
+turtle_move 10
+Turtle "Billy"
+  pos -4,0
+  dir West
+  odometer 24
+
+turtle_move 10
+Turtle "Billy"
+  pos -10,0
+  dir West
+  odometer 34
+
+turtle_move 5
+Turtle "Blinky"
+  pos 5,0
+  dir East
+  odometer 5
+
+turtle_turnRight
+Turtle "Blinky"
+  pos 5,0
+  dir South
+  odometer 5
+
+turtle_move -5
+Turtle "Blinky"
+  pos 5,5
+  dir South
+  odometer 10
+
+turtle_move 14
+Turtle "Blinky"
+  pos 5,-9
+  dir South
+  odometer 24
+
+turtle_move 2
+Turtle "Blinky"
+  pos 5,-10
+  dir South
+  odometer 26
+
+turtle_move -5
+Turtle "Blinky"
+  pos 5,-5
+  dir South
+  odometer 31
+
+turtle_turnRight
+Turtle "Blinky"
+  pos 5,-5
+  dir West
+  odometer 31
+
+turtle_move 3
+Turtle "Blinky"
+  pos 2,-5
+  dir West
+  odometer 34
+
+turtle_move 3
+Turtle "Blinky"
+  pos -1,-5
+  dir West
+  odometer 37
+
+turtle_move 3
+Turtle "Blinky"
+  pos -4,-5
+  dir West
+  odometer 40
+
+turtle_move 3
+Turtle "Blinky"
+  pos -7,-5
+  dir West
+  odometer 43
+
+turtle_move 3
+Turtle "Blinky"
+  pos -10,-5
+  dir West
+  odometer 46
+
+turtle_move 3
+Turtle "Blinky"
+  pos -10,-5
+  dir West
+  odometer 49
+
+turtle_move -12
+Turtle "Blinky"
+  pos 2,-5
+  dir West
+  odometer 61
+
+turtle_move -12
+Turtle "Blinky"
+  pos 10,-5
+  dir West
+  odometer 73
+
+turtle_move 5
+Turtle "Blinky"
+  pos 5,-5
+  dir West
+  odometer 78
+
+turtle_move -6
+Turtle "Blinky"
+  pos 10,-5
+  dir West
+  odometer 84
+
+turtle_move 20
+Turtle "Blinky"
+  pos -10,-5
+  dir West
+  odometer 104
+
+turtle_move -21
+Turtle "Blinky"
+  pos 10,-5
+  dir West
+  odometer 125
+
+turtle_move 5
+Turtle "Blinky"
+  pos 5,-5
+  dir West
+  odometer 130
+
+turtle_turnRight
+Turtle "Blinky"
+  pos 5,-5
+  dir North
+  odometer 130
+
+turtle_move 3
+Turtle "Blinky"
+  pos 5,-2
+  dir North
+  odometer 133
+
+turtle_move 3
+Turtle "Blinky"
+  pos 5,1
+  dir North
+  odometer 136
+
+turtle_move 3
+Turtle "Blinky"
+  pos 5,4
+  dir North
+  odometer 139
+
+turtle_move 3
+Turtle "Blinky"
+  pos 5,7
+  dir North
+  odometer 142
+
+turtle_move 3
+Turtle "Blinky"
+  pos 5,10
+  dir North
+  odometer 145
+
+turtle_move 3
+Turtle "Blinky"
+  pos 5,10
+  dir North
+  odometer 148
+
+turtle_move -12
+Turtle "Blinky"
+  pos 5,-2
+  dir North
+  odometer 160
+
+turtle_move -12
+Turtle "Blinky"
+  pos 5,-10
+  dir North
+  odometer 172
+
+turtle_move 5
+Turtle "Blinky"
+  pos 5,-5
+  dir North
+  odometer 177
+
+turtle_move -6
+Turtle "Blinky"
+  pos 5,-10
+  dir North
+  odometer 183
+
+turtle_move 20
+Turtle "Blinky"
+  pos 5,10
+  dir North
+  odometer 203
+
+turtle_move -21
+Turtle "Blinky"
+  pos 5,-10
+  dir North
+  odometer 224
+
+turtle_move 5
+Turtle "Blinky"
+  pos 5,-5
+  dir North
+  odometer 229
+
+turtle_turnRight
+Turtle "Blinky"
+  pos 5,-5
+  dir East
+  odometer 229
+
+turtle_move 3
+Turtle "Blinky"
+  pos 8,-5
+  dir East
+  odometer 232
+
+turtle_move 3
+Turtle "Blinky"
+  pos 10,-5
+  dir East
+  odometer 235
+
+turtle_move 3
+Turtle "Blinky"
+  pos 10,-5
+  dir East
+  odometer 238
+
+turtle_move 3
+Turtle "Blinky"
+  pos 10,-5
+  dir East
+  odometer 241
+
+turtle_move 3
+Turtle "Blinky"
+  pos 10,-5
+  dir East
+  odometer 244
+
+turtle_move 3
+Turtle "Blinky"
+  pos 10,-5
+  dir East
+  odometer 247
+
+turtle_move -12
+Turtle "Blinky"
+  pos -2,-5
+  dir East
+  odometer 259
+
+turtle_move -12
+Turtle "Blinky"
+  pos -10,-5
+  dir East
+  odometer 271
+
+turtle_move 5
+Turtle "Blinky"
+  pos -5,-5
+  dir East
+  odometer 276
+
+turtle_move -6
+Turtle "Blinky"
+  pos -10,-5
+  dir East
+  odometer 282
+
+turtle_move 20
+Turtle "Blinky"
+  pos 10,-5
+  dir East
+  odometer 302
+
+turtle_move -21
+Turtle "Blinky"
+  pos -10,-5
+  dir East
+  odometer 323
+
+turtle_move 5
+Turtle "Blinky"
+  pos -5,-5
+  dir East
+  odometer 328
+
+Turtle "Billy"
+  pos -10,0
+  dir West
+  odometer 34
+
+Turtle "Blinky"
+  pos -5,-5
+  dir East
+  odometer 328
+
+abcdef01
+f6
+00
+03
+00
+42
+69
+6c
+6c
+22
+00
+00
+00
+23456789
+
+deadbeef
+fb
+fb
+01
+00
+42
+6c
+69
+6e
+48
+01
+00
+00
+c0d4f00d
+
+
++-----------------------------------------------------------+
+|    Magic Value (popped from the stack):                   |
++-----------------------------------------------------------+
+a302f09a
+
++-----------------------------------------------------------+
+|    Testcase Register Dump (fp, then 8 sX regs):           |
++-----------------------------------------------------------+
+df42983b
+826e8575
+37f7f81d
+3c2a5954
+8da6ceac
+00e7531d
+a14c17ee
+7e3f3457
+09c67fb6

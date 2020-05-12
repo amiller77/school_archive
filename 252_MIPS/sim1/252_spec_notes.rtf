@@ -1,0 +1,88 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10360\viewh11000\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 252 SPEC NOTES\
+\
+\
+Operators\
+- can\'92t use addition [do not use a \'91+\'92 anywhere except in for-loops]\
+- can use &&,. ||, !=, >>, <<, & [bitwise and], | [bitwise or]\
+\
+C\
+- extract bits from inputs, then assemble back together\
+\
+\
+Files\
+- Sim1_XOR.java is an example\
+- sim1.h is the header file for the C problem [don\'92t edit]\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 - start with And/Or/Not, then do Add, then 2sComplement, then Sub\
+- do not edit the following: grade_sim1, RussWire.java, Test*, *.out, sim1.h\
+\
+\
+RussWire\
+- point of this is to simulate a wire having only 1 value during a clock cycle\
+- throws exception if you read before setting and if you try to reset it\
+- all inputs and outputs of classes must be RussWire or arrays of RussWire\
+- constructor for every class must create RussWire object for every bit of input/output, which will be public \
+- use get() to read value of wire, set() to write to another\
+\
+Rules\
+- in execute(), you can\'92t create any new objects [have to do it in the constructor] (can create new primitives however)\
+- no math ops except for ++ in a for loop\
+\
+\
+Sim1_ADD\
+- 2 32-bit inputs, several outputs\
+- primary output is 32-bit array containing output of addition\
+- carryOut wire indicates if carry-out occured; overflow wire indicates if overflow occured\
+- input and output are 32-bit signed integers, which will effect how you determine if overflow has occurred\
+- 
+\b element [0] of each array is the least significant bit, element 31 is the most significant bit\
+
+\b0 \
+Sim1_2sComplement\
+- uses NOT class to negate inputs\
+- uses ADD to add 1 to negated values\
+\
+Sim1_SUB\
+- must be composed from 2sComplement and Add classes\
+- doesn\'92t have carryOut or overflow outputs\
+\
+\
+C-code: execute_add(Sim1Data *obj)\
+- implement a single function, which performs 32-bit signed addition\
+- inputs and outputs for the function are stored in a struct which is passed by pointer to the C code\
+- input and output is not arrays, but rather actual 32-bit integers\
+- must perform bitwise addition, and not use the C addition operator\
+	- will need a for-loop to iterate over 32 bits\
+	- use bit-shifting and masking to extract one bit from input a and b resp.\
+	- find sum and carry bits for current column\
+	- save carry to temporary variable for use in next iteration\
+	- write sum-bit to output using bit shifting and masking\
+- aNonNeg, bNonNeg, sumNonNeg -> flags to indicate negativity for inputs and sum\
+	- must extract MSB for this; can\'92t use inequality\
+- execute_add()\
+	- must read isSubtraction field out of struct\
+		- if 1 -> carry-in to first column of adder\
+		- negate each bit of second input and perform addition\
+	- can\'92t have ADD and SUB be different pieces of code, use one loop that does both\
+- 2scomplement\
+	- don\'92t need to worry about 0 or the most negative number as edge cases when determining overflow\
+\
+\
+\
+\
+\
+// DEBUGGING ADD TESTS ; TEST 1 LOOKS OK I THINK\
+\
+\
+\
+\
+\
+\
+}

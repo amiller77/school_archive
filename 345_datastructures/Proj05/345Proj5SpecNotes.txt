@@ -1,0 +1,51 @@
+345 PROJECT 5 SPEC NOTES
+
+- ability to store graphs and digraphs
+- constructor
+	- takes boolean parameter which is true if digraph 
+- addNode
+	- param - name of the node (unique node names)
+- addEdge
+	- params - from node, to node, int weight of edge
+		- the nodes have already been declared with addNode
+		- not a self-loop
+		- weight is non=negative
+		- edge has not been previously declared
+- runDijkstra
+	- parameter - name of node to start with
+	- end state: know shortest path to every node, or if it is unreachable
+	- runDijkstra called at most once in lifetime of object
+- printDijkstraResults
+	- prints out the best path to every node
+	- each line prints out the list of nodes in the given path
+- writeSolutionDotFile
+	- writes a dot file that shows the solution
+	- input graph directed -> dot graph directed [and so for undirected]
+	- includes all nodes/edges from original graph, including edge weights
+	- nodes labeled with node name and best distance found by Dijkstra’s; unreachable nodes contain only node name
+	- selected edges which form the paths are indicated as such in some fashion
+
+
+
+
+digraph {
+  A;
+  B;
+  C;
+  D;
+  E;
+
+  A -> D [label=2];
+  A -> E [label=2];
+  B -> A [label=1];
+  B -> D [label=9];
+  B -> E [label=4];
+  C -> D [label=2];
+  D -> C [label=8];
+  D -> E [label=3];
+}
+A -> A: best 0: A
+A -> B: NO PATH
+A -> C: best 10: A D C
+A -> D: best 2: A D
+A -> E: best 2: A E

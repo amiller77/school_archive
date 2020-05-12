@@ -1,0 +1,65 @@
+/*
+* File: paint.css
+* Author: Alexander Miller
+* HMWK: 9, Paint
+* Class: 337
+* Date: Nov. 6
+*/
+
+body {
+  background-color: #222222;
+  color: white;
+  font-family: Helvetica, sans-serif;
+  margin: auto;
+  text-align: center;
+}
+
+canvas {
+  background-color: white;
+}
+
+#colorPicker, #penSettings {
+  height: 100px;
+}
+
+#colorPicker, #modeButtons, #penSettings {
+  margin: 15px;
+}
+
+h1 {
+  font-size: 36px;
+  letter-spacing: 3px;
+}
+
+#modeButtons {
+  flex-direction: column;
+}
+
+#modeButtons, #penButtons, #workSpace {
+    display: flex;
+}
+
+#modeButtons > button {
+  margin: 5px;
+  width: 80px;
+}
+
+#penButtons {
+  align-items: flex-end;
+}
+
+#penButtons > button {
+  height: 30%;
+}
+
+#penButtons, #workSpace {
+  flex-direction: row;
+}
+
+#penDisplay {
+  left: 50%;
+}
+
+#workSpace {
+  justify-content: center;
+}

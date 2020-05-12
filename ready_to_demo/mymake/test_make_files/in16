@@ -1,0 +1,5 @@
+target: D
+	touch target
+
+D:
+	touch D

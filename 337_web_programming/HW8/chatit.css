@@ -1,0 +1,48 @@
+/*
+* Document: chatit.css
+* Author: Alexander Miller
+* Description: CSS page for chat service
+*   -> contains at least 10 styles
+* Course: CSC 337
+* Date: 10/31
+*/
+
+#body {
+  background-color: rgb(250,250,250);
+}
+
+#commentInput {
+  height: 25%;
+}
+
+#contents {
+  flex-direction: row;
+}
+
+#contents, #inputZone {
+  display: flex;
+}
+
+#headers {
+  text-align:center;
+}
+
+#inputZone {
+  flex-direction: column;
+}
+
+label, #messageReceived {
+  font-family: cursive;
+}
+
+#nameInput {
+  width: 40%;
+}
+
+.spacer {
+  width:33%;
+}
+
+#submitButton {
+  margin: auto;
+}

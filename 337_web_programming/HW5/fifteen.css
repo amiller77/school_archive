@@ -1,0 +1,20 @@
+/*
+* fifteen.css
+* this CSS file provides the basic styling for the fifteen puzzle page
+*/
+
+body {
+  font-family: cursive;
+  font-size: 14pt;
+}
+
+#controls, h1, #output, p, #puzzlearea, #w3c {
+  margin: auto;
+  text-align: center;
+}
+
+#puzzlearea {
+  height: 400px;
+  position: relative;
+  width: 400px;
+}

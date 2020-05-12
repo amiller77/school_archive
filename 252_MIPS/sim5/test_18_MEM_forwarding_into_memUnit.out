@@ -1,0 +1,1998 @@
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=0
+|     aheadReg =17
+|     thisReg  =17
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 17
+     EX_MEM.rtVal = 0x7695_d480
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 2
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_1d60
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x100f_7202
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 17
+     MEM_WB.regWrite = 0
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_1d60   Was: 0x7cab_73a1 Now: 0x7695_d480
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_1d60
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 2
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=0
+|     aheadReg =17
+|     thisReg  =18
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 18
+     EX_MEM.rtVal = 0x5bc5_0987
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 28
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_2800
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x29d0_f7f5
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 17
+     MEM_WB.regWrite = 0
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_2800   Was: 0x7c45_457e Now: 0x5bc5_0987
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_2800
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 28
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=0
+|     aheadReg =17
+|     thisReg  =19
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 19
+     EX_MEM.rtVal = 0x74a2_66df
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 1
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_0fcc
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x71e6_ed2d
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 17
+     MEM_WB.regWrite = 0
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_0fcc   Was: 0x732d_3c82 Now: 0x74a2_66df
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_0fcc
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 1
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=0
+|     aheadReg =18
+|     thisReg  =17
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 17
+     EX_MEM.rtVal = 0x5665_47cf
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 14
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_313c
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x1a36_3649
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 18
+     MEM_WB.regWrite = 0
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_313c   Was: 0x580f_31a0 Now: 0x5665_47cf
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_313c
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 14
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=0
+|     aheadReg =18
+|     thisReg  =18
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 18
+     EX_MEM.rtVal = 0x2538_29dc
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 13
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_3d80
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x5d57_987a
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 18
+     MEM_WB.regWrite = 0
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_3d80   Was: 0x47fe_77ca Now: 0x2538_29dc
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_3d80
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 13
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=0
+|     aheadReg =18
+|     thisReg  =19
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 19
+     EX_MEM.rtVal = 0x5742_d53c
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 26
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_1c0c
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x4abc_add4
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 18
+     MEM_WB.regWrite = 0
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_1c0c   Was: 0x120d_8e43 Now: 0x5742_d53c
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_1c0c
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 26
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=0
+|     aheadReg =19
+|     thisReg  =17
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 17
+     EX_MEM.rtVal = 0x3e40_5d31
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 7
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_1f20
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x5191_0d56
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 19
+     MEM_WB.regWrite = 0
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_1f20   Was: 0x634e_5ae9 Now: 0x3e40_5d31
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_1f20
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 7
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=0
+|     aheadReg =19
+|     thisReg  =18
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 18
+     EX_MEM.rtVal = 0x4f0b_93e3
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 11
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_3630
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x45a1_6863
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 19
+     MEM_WB.regWrite = 0
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_3630   Was: 0x18f0_28c8 Now: 0x4f0b_93e3
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_3630
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 11
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=0
+|     aheadReg =19
+|     thisReg  =19
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 19
+     EX_MEM.rtVal = 0x39a6_ae6d
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 4
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_2994
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x156b_b7f4
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 19
+     MEM_WB.regWrite = 0
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_2994   Was: 0x7484_4dfa Now: 0x39a6_ae6d
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_2994
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 4
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=1
+|     aheadReg =17
+|     thisReg  =17
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 17
+     EX_MEM.rtVal = 0x44c5_b221
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 5
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_3fa4
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x3968_1900
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 17
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_3fa4   Was: 0x239a_e9a3 Now: 0x3968_1900
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_3fa4
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 5
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=1
+|     aheadReg =17
+|     thisReg  =18
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 18
+     EX_MEM.rtVal = 0x6a47_b246
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 29
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_18b4
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x40ac_fa15
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 17
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_18b4   Was: 0x2e25_c038 Now: 0x6a47_b246
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_18b4
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 29
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=1
+|     aheadReg =17
+|     thisReg  =19
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 19
+     EX_MEM.rtVal = 0x30d2_eccb
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 29
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_017c
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x560b_16a7
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 17
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_017c   Was: 0x1eb9_f17b Now: 0x30d2_eccb
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_017c
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 29
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=1
+|     aheadReg =18
+|     thisReg  =17
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 17
+     EX_MEM.rtVal = 0x00c8_a24a
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 31
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_3c84
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x580b_7786
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 18
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_3c84   Was: 0x5b86_f1a8 Now: 0x00c8_a24a
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_3c84
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 31
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=1
+|     aheadReg =18
+|     thisReg  =18
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 18
+     EX_MEM.rtVal = 0x5e10_f9fa
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 5
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_1568
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x1c51_572b
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 18
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_1568   Was: 0x0551_7092 Now: 0x1c51_572b
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_1568
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 5
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=1
+|     aheadReg =18
+|     thisReg  =19
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 19
+     EX_MEM.rtVal = 0x2108_8b2c
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 2
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_1204
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x7014_1f0f
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 18
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_1204   Was: 0x5328_7fb1 Now: 0x2108_8b2c
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_1204
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 2
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=1
+|     aheadReg =19
+|     thisReg  =17
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 17
+     EX_MEM.rtVal = 0x79a7_e28d
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 13
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_1dcc
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x334e_90fa
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 19
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_1dcc   Was: 0x6788_24bb Now: 0x79a7_e28d
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_1dcc
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 13
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=1
+|     aheadReg =19
+|     thisReg  =18
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 18
+     EX_MEM.rtVal = 0x5d53_c6f1
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 24
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_23bc
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x2219_7912
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 19
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_23bc   Was: 0x78cb_b29f Now: 0x5d53_c6f1
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_23bc
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 24
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=1
+|     aheadReg =19
+|     thisReg  =19
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 19
+     EX_MEM.rtVal = 0x1b44_d63e
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 24
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_084c
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x058c_8884
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 19
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_084c   Was: 0x2d44_d760 Now: 0x058c_8884
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_084c
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 24
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=2
+|     aheadReg =17
+|     thisReg  =17
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 17
+     EX_MEM.rtVal = 0x3455_ecb5
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 0
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_0a68
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 1
+     MEM_WB.aluResult = 0x6528_d981
+     MEM_WB.memResult = 0x4ca9_5abd
+     ---
+     MEM_WB.writeReg = 17
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_0a68   Was: 0x505b_7674 Now: 0x4ca9_5abd
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_0a68
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 0
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=2
+|     aheadReg =17
+|     thisReg  =18
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 18
+     EX_MEM.rtVal = 0x211c_b2f9
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 8
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_341c
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 1
+     MEM_WB.aluResult = 0x2d67_e2b8
+     MEM_WB.memResult = 0x6e96_9f4a
+     ---
+     MEM_WB.writeReg = 17
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_341c   Was: 0x178f_0606 Now: 0x211c_b2f9
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_341c
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 8
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=2
+|     aheadReg =17
+|     thisReg  =19
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 19
+     EX_MEM.rtVal = 0x257d_748d
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 18
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_15bc
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 1
+     MEM_WB.aluResult = 0x4845_99e7
+     MEM_WB.memResult = 0x27ca_33dd
+     ---
+     MEM_WB.writeReg = 17
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_15bc   Was: 0x6187_1580 Now: 0x257d_748d
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_15bc
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 18
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=2
+|     aheadReg =18
+|     thisReg  =17
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 17
+     EX_MEM.rtVal = 0x1175_309b
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 10
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_2178
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 1
+     MEM_WB.aluResult = 0x0189_4fab
+     MEM_WB.memResult = 0x13a8_4997
+     ---
+     MEM_WB.writeReg = 18
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_2178   Was: 0x60a9_2ac6 Now: 0x1175_309b
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_2178
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 10
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=2
+|     aheadReg =18
+|     thisReg  =18
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 18
+     EX_MEM.rtVal = 0x7f42_2a6b
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 30
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_2a48
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 1
+     MEM_WB.aluResult = 0x5c95_f15d
+     MEM_WB.memResult = 0x42a5_38f6
+     ---
+     MEM_WB.writeReg = 18
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_2a48   Was: 0x7393_2f3c Now: 0x42a5_38f6
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_2a48
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 30
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=2
+|     aheadReg =18
+|     thisReg  =19
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 19
+     EX_MEM.rtVal = 0x0fb1_2381
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 15
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_3cd0
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 1
+     MEM_WB.aluResult = 0x17a8_1c59
+     MEM_WB.memResult = 0x5a30_fc82
+     ---
+     MEM_WB.writeReg = 18
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_3cd0   Was: 0x348d_10e1 Now: 0x0fb1_2381
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_3cd0
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 15
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=2
+|     aheadReg =19
+|     thisReg  =17
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 17
+     EX_MEM.rtVal = 0x6376_97b9
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 15
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_130c
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 1
+     MEM_WB.aluResult = 0x29b0_1a53
+     MEM_WB.memResult = 0x3126_e290
+     ---
+     MEM_WB.writeReg = 19
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_130c   Was: 0x593b_d1bf Now: 0x6376_97b9
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_130c
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 15
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=2
+|     aheadReg =19
+|     thisReg  =18
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 18
+     EX_MEM.rtVal = 0x2daa_ef80
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 12
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_0ae0
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 1
+     MEM_WB.aluResult = 0x7b1c_ec88
+     MEM_WB.memResult = 0x7834_b004
+     ---
+     MEM_WB.writeReg = 19
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_0ae0   Was: 0x0697_8093 Now: 0x2daa_ef80
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_0ae0
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 12
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=2
+|     aheadReg =19
+|     thisReg  =19
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 19
+     EX_MEM.rtVal = 0x5af1_7202
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 21
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_32dc
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 1
+     MEM_WB.aluResult = 0x4b5e_1771
+     MEM_WB.memResult = 0x68df_fafd
+     ---
+     MEM_WB.writeReg = 19
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_32dc   Was: 0x70e4_01ed Now: 0x68df_fafd
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_32dc
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 21
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=0
+|     aheadReg =17
+|     thisReg  =17
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 17
+     EX_MEM.rtVal = 0x2b77_c094
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 13
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_081c
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x4124_58f3
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 17
+     MEM_WB.regWrite = 0
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_081c   Was: 0x44a2_881e Now: 0x2b77_c094
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_081c
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 13
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=0
+|     aheadReg =17
+|     thisReg  =18
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 18
+     EX_MEM.rtVal = 0x5e5c_97b8
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 30
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_0d78
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x159b_6ed6
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 17
+     MEM_WB.regWrite = 0
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_0d78   Was: 0x5baf_7f8e Now: 0x5e5c_97b8
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_0d78
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 30
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=0
+|     aheadReg =17
+|     thisReg  =19
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 19
+     EX_MEM.rtVal = 0x5d7f_8630
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 27
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_1f30
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x6d30_a9b1
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 17
+     MEM_WB.regWrite = 0
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_1f30   Was: 0x328c_2656 Now: 0x5d7f_8630
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_1f30
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 27
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=0
+|     aheadReg =18
+|     thisReg  =17
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 17
+     EX_MEM.rtVal = 0x1bab_df2b
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 1
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_182c
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x75dc_dbad
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 18
+     MEM_WB.regWrite = 0
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_182c   Was: 0x4501_61de Now: 0x1bab_df2b
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_182c
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 1
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=0
+|     aheadReg =18
+|     thisReg  =18
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 18
+     EX_MEM.rtVal = 0x19a1_4eba
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 26
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_01c0
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x4351_690d
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 18
+     MEM_WB.regWrite = 0
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_01c0   Was: 0x73d7_3a6b Now: 0x19a1_4eba
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_01c0
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 26
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=0
+|     aheadReg =18
+|     thisReg  =19
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 19
+     EX_MEM.rtVal = 0x01fd_b1aa
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 17
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_1964
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x6e58_8462
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 18
+     MEM_WB.regWrite = 0
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_1964   Was: 0x0398_bfa9 Now: 0x01fd_b1aa
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_1964
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 17
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=0
+|     aheadReg =19
+|     thisReg  =17
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 17
+     EX_MEM.rtVal = 0x7fa6_4c79
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 29
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_1994
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x2040_ad8e
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 19
+     MEM_WB.regWrite = 0
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_1994   Was: 0x4b3d_5399 Now: 0x7fa6_4c79
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_1994
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 29
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=0
+|     aheadReg =19
+|     thisReg  =18
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 18
+     EX_MEM.rtVal = 0x0a00_7314
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 22
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_222c
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x3578_33a9
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 19
+     MEM_WB.regWrite = 0
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_222c   Was: 0x7b37_d453 Now: 0x0a00_7314
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_222c
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 22
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=0
+|     aheadReg =19
+|     thisReg  =19
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 19
+     EX_MEM.rtVal = 0x717b_55e3
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 18
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_3270
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x4fd7_ed9b
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 19
+     MEM_WB.regWrite = 0
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_3270   Was: 0x0dd9_5ff0 Now: 0x717b_55e3
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_3270
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 18
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=1
+|     aheadReg =17
+|     thisReg  =17
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 17
+     EX_MEM.rtVal = 0x2289_b631
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 26
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_31c4
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x0009_3c61
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 17
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_31c4   Was: 0x742a_4d40 Now: 0x0009_3c61
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_31c4
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 26
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=1
+|     aheadReg =17
+|     thisReg  =18
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 18
+     EX_MEM.rtVal = 0x53ff_84b6
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 30
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_184c
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x6fab_63e1
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 17
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_184c   Was: 0x59af_b983 Now: 0x53ff_84b6
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_184c
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 30
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=1
+|     aheadReg =17
+|     thisReg  =19
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 19
+     EX_MEM.rtVal = 0x73de_bb3f
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 30
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_3e38
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x0d80_09f9
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 17
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_3e38   Was: 0x1e90_a6e7 Now: 0x73de_bb3f
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_3e38
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 30
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=1
+|     aheadReg =18
+|     thisReg  =17
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 17
+     EX_MEM.rtVal = 0x42e9_7b38
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 31
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_0c18
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x44e7_2ce2
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 18
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_0c18   Was: 0x131b_be9a Now: 0x42e9_7b38
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_0c18
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 31
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=1
+|     aheadReg =18
+|     thisReg  =18
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 18
+     EX_MEM.rtVal = 0x40f0_0ff0
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 31
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_0510
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x4096_5c69
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 18
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_0510   Was: 0x0b4c_5fc0 Now: 0x4096_5c69
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_0510
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 31
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=1
+|     aheadReg =18
+|     thisReg  =19
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 19
+     EX_MEM.rtVal = 0x6542_8fbc
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 9
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_27dc
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x6f43_02d1
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 18
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_27dc   Was: 0x4f38_e01f Now: 0x6542_8fbc
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_27dc
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 9
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=1
+|     aheadReg =19
+|     thisReg  =17
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 17
+     EX_MEM.rtVal = 0x1131_b580
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 3
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_19e8
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x02ad_0b63
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 19
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_19e8   Was: 0x0083_9c55 Now: 0x1131_b580
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_19e8
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 3
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=1
+|     aheadReg =19
+|     thisReg  =18
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 18
+     EX_MEM.rtVal = 0x75f8_bd15
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 22
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_23fc
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x1882_7346
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 19
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_23fc   Was: 0x6a83_fbfd Now: 0x75f8_bd15
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_23fc
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 22
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=1
+|     aheadReg =19
+|     thisReg  =19
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 19
+     EX_MEM.rtVal = 0x525a_d310
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 16
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_3ea0
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 0
+     MEM_WB.aluResult = 0x265a_57c6
+     MEM_WB.memResult = 0x0000_0000
+     ---
+     MEM_WB.writeReg = 19
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_3ea0   Was: 0x53fc_17b0 Now: 0x265a_57c6
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_3ea0
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 16
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=2
+|     aheadReg =17
+|     thisReg  =17
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 17
+     EX_MEM.rtVal = 0x75ac_59ae
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 27
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_2e9c
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 1
+     MEM_WB.aluResult = 0x698b_14ed
+     MEM_WB.memResult = 0x77d8_41d9
+     ---
+     MEM_WB.writeReg = 17
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_2e9c   Was: 0x61a9_1978 Now: 0x77d8_41d9
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_2e9c
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 27
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=2
+|     aheadReg =17
+|     thisReg  =18
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 18
+     EX_MEM.rtVal = 0x7b8d_fb36
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 6
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_3444
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 1
+     MEM_WB.aluResult = 0x37f4_ab35
+     MEM_WB.memResult = 0x47dc_91ec
+     ---
+     MEM_WB.writeReg = 17
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_3444   Was: 0x3fcf_8bd9 Now: 0x7b8d_fb36
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_3444
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 6
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=2
+|     aheadReg =17
+|     thisReg  =19
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 19
+     EX_MEM.rtVal = 0x7fa8_e9f3
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 5
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_2d2c
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 1
+     MEM_WB.aluResult = 0x32e8_9b37
+     MEM_WB.memResult = 0x397b_178e
+     ---
+     MEM_WB.writeReg = 17
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_2d2c   Was: 0x52e8_8b94 Now: 0x7fa8_e9f3
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_2d2c
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 5
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=2
+|     aheadReg =18
+|     thisReg  =17
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 17
+     EX_MEM.rtVal = 0x0c0e_cb08
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 1
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_0614
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 1
+     MEM_WB.aluResult = 0x7b51_cdd9
+     MEM_WB.memResult = 0x40a3_f861
+     ---
+     MEM_WB.writeReg = 18
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_0614   Was: 0x18c7_10c7 Now: 0x0c0e_cb08
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_0614
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 1
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=2
+|     aheadReg =18
+|     thisReg  =18
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 18
+     EX_MEM.rtVal = 0x0449_d408
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 19
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_0f10
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 1
+     MEM_WB.aluResult = 0x7a42_911e
+     MEM_WB.memResult = 0x3b64_c769
+     ---
+     MEM_WB.writeReg = 18
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_0f10   Was: 0x2f9f_83b8 Now: 0x3b64_c769
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_0f10
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 19
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=2
+|     aheadReg =18
+|     thisReg  =19
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 19
+     EX_MEM.rtVal = 0x15d5_fcc3
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 4
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_29e4
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 1
+     MEM_WB.aluResult = 0x4dce_5234
+     MEM_WB.memResult = 0x2b50_b40c
+     ---
+     MEM_WB.writeReg = 18
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_29e4   Was: 0x55f3_1b73 Now: 0x15d5_fcc3
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_29e4
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 4
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=2
+|     aheadReg =19
+|     thisReg  =17
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 17
+     EX_MEM.rtVal = 0x3419_f240
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 2
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_271c
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 1
+     MEM_WB.aluResult = 0x4a1f_ade7
+     MEM_WB.memResult = 0x2d05_c0d0
+     ---
+     MEM_WB.writeReg = 19
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_271c   Was: 0x726b_1769 Now: 0x3419_f240
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_271c
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 2
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=2
+|     aheadReg =19
+|     thisReg  =18
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 18
+     EX_MEM.rtVal = 0x28ee_8ba0
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 29
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_3ed8
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 1
+     MEM_WB.aluResult = 0x63b0_48b1
+     MEM_WB.memResult = 0x7da2_5452
+     ---
+     MEM_WB.writeReg = 19
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_3ed8   Was: 0x0de8_c1be Now: 0x28ee_8ba0
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_3ed8
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 29
+  MEM_WB.regWrite = 0
+
++--------- BEGIN ARTIFICIAL TESTCASE ----------
+| Testcase loop variables: *NOT* control wires!!!
+|     writeMode=2
+|     aheadReg =19
+|     thisReg  =19
++----------------------------------------------
+  -- Old EX/MEM pipline fields --
+     EX_MEM.rt = 19
+     EX_MEM.rtVal = 0x6bed_71a3
+     ---
+     EX_MEM.memRead  = 0
+     EX_MEM.memWrite = 1
+     EX_MEM.memToReg = 0
+     ---
+     EX_MEM.writeReg = 4
+     EX_MEM.regWrite = 0
+     ---
+     EX_MEM.aluResult = 0x0000_3ddc
+
+  -- Old MEM/WB pipline fields --
+     MEM_WB.memToReg  = 1
+     MEM_WB.aluResult = 0x12b9_acee
+     MEM_WB.memResult = 0x1641_cddc
+     ---
+     MEM_WB.writeReg = 19
+     MEM_WB.regWrite = 1
+
+  -- NOW TESTING THE MEM PHASE --
+  MEM CHANGED: Address=0x0000_3ddc   Was: 0x1905_e33b Now: 0x1641_cddc
+
+  MEM_WB.memToReg  = 0
+  MEM_WB.aluResult = 0x0000_3ddc
+  MEM_WB.memResult = 0x0000_0000
+  ---
+  MEM_WB.writeReg = 4
+  MEM_WB.regWrite = 0
+

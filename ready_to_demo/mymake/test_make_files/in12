@@ -1,0 +1,3 @@
+target: a b
+	gcc -Wall sim4.c
+	gcc -Wall sim4.c

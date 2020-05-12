@@ -1,0 +1,23 @@
+README
+
+DESCRIPTION
+- C program to mimic essential functionality of "make", a command line tool for resolving dependencies when compiling C programs
+- makes use of a makefile to build dependency tree; only recompiles the files which require recompilation
+- NOTE: MAKES USE OF SYSCALLS PARTICULAR TO UNIX SYSTEMS
+
+BUILDING THE PROJECT
+- on command line: make mymake2.c
+
+RUNNING THE PROJECT - COMMAND LINE INVOCATIONS 
+- mymake2
+	- tries "myMakefile" as filename, chooses first target
+- mymake2 -f makefile
+	- allows specification of makefile; tries first target
+- mymake2 target
+	- tries "myMakefile" as filename
+- mymake2 -f makeFile target
+	- allows specification of makefile and of target
+- mymake2 target -f makeFile
+	- acceptable alternative order
+
+

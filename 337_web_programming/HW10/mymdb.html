@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+File: mymdb.html
+Author: Alexander Miller
+Description: html file for website allowing search and results of database
+Course: CSC 337
+Assignment: HW 10 ~ Kevin Bacon
+Date: November 14, 2018
+Appearance:
+  ^ allow user to search for actors
+  ^ contains 2 text box with button pairs allowing search for actors by first and last names
+  ^ contains MyMDb logo, W3C validator button links
+  ^ query results shown in tables with descriptive captions and column headers
+-->
+
+<html>
+  <head>
+    <title>The Bacon Game</title>
+    <link href="mymdb.css" type="text/css" rel="stylesheet" />
+    <script src="mymdb.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div class="banner" id="topBanner">
+      <img src="http://allisonobourn.com/337/images/kevinbacon/mymdb.png" alt="MyMDb" id="myMDBpic" />
+      <span>My Movie Database</span>
+    </div>
+
+    <h1>The Bacon Game</h1>
+
+    <div id="results"></div>
+
+    <fieldset><legend>All movies</legend>
+      <div>
+        <label>First Name: <input type="text" id="allMoviesFirstName" /></label>
+        <label>Last Name: <input type="text" id="allMoviesLastName" /></label>
+        <button id="allMoviesGo">go</button>
+      </div>
+    </fieldset>
+
+    <fieldset><legend>Movies with Kevin Bacon</legend>
+      <div>
+        <label>First Name: <input type="text" id="kevinBaconFirstName" /></label>
+        <label>Last Name: <input type="text" id="kevinBaconLastName" /></label>
+        <button id="kevinBaconGo">go</button>
+      </div>
+    </fieldset>
+
+    <div class="banner" id="bottomBanner">
+      <a href="https://validator.w3.org/"><img src="http://allisonobourn.com/337/fall18/homework/1/w3c-html.png" alt="W3C HTML" /></a>
+      <a href="https://jigsaw.w3.org/css-validator/"><img src="http://allisonobourn.com/337/fall18/homework/1/w3c-css.png" alt="W3C CSS" /></a>
+    </div>
+  </body>
+</html>

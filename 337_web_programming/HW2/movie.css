@@ -1,0 +1,125 @@
+#banner {
+  background-image: url("http://allisonobourn.com/images/rancidbannerbg.png");
+  height: 50px;
+}
+
+#banner, body {
+  padding: 0px;
+}
+
+#banner, body, #bottom {
+  margin: 0px;
+  text-align: center;
+}
+
+#banner, #reviewBanner {
+  background-repeat: repeat-x;
+}
+
+.criticLeft, .criticRight {
+  margin-bottom: 50px;
+}
+
+body {
+  background-image: url("http://allisonobourn.com/images/moviebg.png");
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+}
+
+#bottom {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 5px;
+}
+
+#bottom, #rightColumn { /* movie metadata */
+  background-color: #A2B964;
+}
+
+dl {
+  padding: 10pt;
+}
+
+dd, span {
+  margin-bottom: 10pt;
+}
+
+dt, #reviewBanner {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 24pt;
+  text-shadow: 3px 3px #999999;
+}
+
+h1, .reviewsLeft, .reviewsRight {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+#leftColumn {
+  background-color: #EEEEEE;
+  width: 550px;
+}
+
+#leftColumn, #reviewBanner, #reviewBannerPic {
+  border-top-left-radius: 20px;
+}
+
+#links {
+  text-align: right;
+}
+
+#mainColumns, #reviewBanner, #reviews {
+  display: flex;
+}
+
+#mainContents {
+  box-shadow: 5px 5px 5px;
+  margin: auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+#mainContents, .reviewsLeft, .reviewsRight {
+  border-radius: 20px;
+}
+
+#moviePoster, #rightColumn {
+  border-top-right-radius: 20px;
+}
+
+#reviewBanner {
+  align-items: flex-end;
+  background-image: url("http://allisonobourn.com/images/rottenlargebg.png");
+  color: red;
+  flex-direction: row;
+  font-size: 48pt;
+  height: 83px;
+}
+
+#reviews img {
+  margin-right: 5px;
+}
+
+#reviewsLeft, #reviewsRight {
+  margin-left: auto;
+  margin-right: auto;
+  width: 47%;
+}
+
+.reviewsLeft, .reviewsRight {
+  background-color: #FFFFFF;
+  border: 2px solid #CCCCCC;
+  padding: 8px;
+}
+
+#rightColumn {
+  width: 250px;
+}
+
+/* extra feature */
+span {
+  color: white;
+  font-size: 8pt;
+}

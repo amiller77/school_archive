@@ -1,0 +1,65 @@
+is   inOrder
+is postOrder
+is dotFile
+
+is set 10 oops_actually_ten
+is   inOrder
+is postOrder
+is dotFile
+
+is set 10 ten
+is   inOrder
+is postOrder
+is dotFile
+
+is get 15
+
+is set 15 fifteen
+is   inOrder
+is postOrder
+is dotFile
+
+is get 15
+is get 5
+
+is set 5 five
+is inOrder
+is postOrder
+is dotFile
+
+is get 15
+is get 5
+
+is set 20 twenty
+is inOrder
+is postOrder
+is dotFile
+
+is set 30 thirty
+is inOrder
+is postOrder
+is dotFile
+
+is rotateLeft 15
+is inOrder
+is postOrder
+is dotFile
+
+is rotateRight 10
+is inOrder
+is postOrder
+is dotFile
+
+is get 15
+is get 10
+is get 20
+
+is remove 20
+is inOrder
+is postOrder
+is dotFile
+
+is get 15
+
+ii dotFile
+si dotFile

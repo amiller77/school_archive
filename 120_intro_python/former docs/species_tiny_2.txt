@@ -1,0 +1,13 @@
+Acadia National Park,Bird,Accipiter cooperii,Cooper's Hawk,Present,Native,Uncommon,,Species of Concern,
+
+Acadia National Park,Bird,Accipiter cooperii,"Eastern Goshawk; Goshawk; Northern Goshawk",Present,Native,Uncommon,Breeder,,
+
+Acadia National Park,Bird,Accipiter cooperii,"Northern Sharp-Shinned Hawk; Sharp-Shinned Hawk",Present,Native,Common,Breeder,Species of Concern,
+
+Acadia National Park,Mammal,Alces alces,Moose,Present,Native,Rare,Resident,,
+
+Acadia National Park,Mammal,Canis latrans,"Coyote; Eastern Coyote",Present,Not Native,Common,,Species of Concern,
+Acadia National Park,Mammal,Odocoileus virginianus,"Northern White-Tailed Deer; Virginia Deer; White-Tailed Deer",Present,Native,Abundant,,,
+Acadia National Park,Vascular Plant,Dryopteris cristata x intermedia,Boott's Wood Fern,Not Present (Historical Report),Native,,,,
+Acadia National Park,Vascular Plant,Drypoteris cristata x marginalis,Crested Wood Fern,Not Confirmed,Native,,,,
+Acadia National Park,Vascular Plant,Glyceria x laxa,Rattlesnake Grass,Present,Native,Uncommon,,,

@@ -1,0 +1,15 @@
+shortestPaths: shortestPaths.o graphTools.o dykstra.o
+	gcc -Wall -o shortestPaths shortestPaths.o graphTools.o dykstra.o
+
+shortestPaths.o: shortestPaths.c graphTools.h dykstra.h
+	gcc -Wall -c shortestPaths.c
+
+graphTools.o: graphTools.c graphTools.h
+	gcc -Wall -c graphTools.c
+
+dykstra.o: dykstra.c graphTools.h dykstra.h
+	gcc -Wall -c dykstra.c
+
+.PHONY: clean
+clean:
+	rm -f *.o shortestPaths
